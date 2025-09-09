@@ -113,13 +113,13 @@ ${formData.message}
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@codelythe.com',
+      value: 'codelythe@gmail.com',
       description: 'Réponse sous 24h'
     },
     {
       icon: Phone,
       title: 'Téléphone',
-      value: '+33 6 XX XX XX XX',
+      value: '+33 7 68 89 83 88',
       description: 'Du lundi au vendredi, 9h-18h'
     },
     {
@@ -167,7 +167,7 @@ ${formData.message}
     },
     {
       question: 'Quels sont vos délais moyens ?',
-      answer: 'Cela dépend de la complexité, mais généralement 2-4 semaines pour un site vitrine, 4-8 semaines pour un e-commerce, et 6-12 semaines pour une plateforme communautaire.'
+      answer: 'Cela dépend de la complexité, mais généralement 1 semaine maximum pour un site vitrine, 4-8 semaines pour un e-commerce, et 6-12 semaines pour une plateforme communautaire.'
     }
   ]
 

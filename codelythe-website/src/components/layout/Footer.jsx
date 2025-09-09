@@ -6,7 +6,7 @@ const Footer = () => {
   const socialLinks = [
     { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/codelythe/' },
     { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/tom-bouchard-881b212b2' },
-    { name: 'Email', icon: Mail, href: 'mailto:contact@codelythe.com' },
+    { name: 'Email', icon: Mail, href: 'mailto:codelythe@gmail.com' },
   ]
 
   const quickLinks = [
