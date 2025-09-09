@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageSquare } from 'lucide-react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 import Card from '../components/ui/Card'
 import Button from '../components/ui/Button'
 
@@ -17,6 +18,15 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+  // Initialize EmailJS when component mounts
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    if (publicKey) {
+      emailjs.init(publicKey)
+      console.log('EmailJS initialized')
+    }
+  }, [])
+
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -26,13 +36,77 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.message) {
+      alert('Veuillez remplir tous les champs obligatoires.')
+      return
+    }
+    
     setIsSubmitting(true)
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
+    try {
+      // Get EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+      
+      console.log('Sending email with EmailJS...')
+      console.log('Service ID:', serviceId)
+      console.log('Template ID:', templateId)
+      
+      if (!serviceId || !templateId) {
+        throw new Error('EmailJS configuration missing')
+      }
+      
+      // Prepare template parameters
+      const templateParams = {
+        title: `Nouveau message de ${formData.name}`,
+        name: formData.name,
+        email: formData.email,
+        company: formData.company || 'Non spécifiée',
+        project_type: projectTypes.find(p => p.value === formData.projectType)?.label || 'Non spécifié',
+        budget: budgetRanges.find(b => b.value === formData.budget)?.label || 'Non spécifié',
+        timeline: timelines.find(t => t.value === formData.timeline)?.label || 'Non spécifié',
+        time: new Date().toLocaleString('fr-FR'),
+        message: `
+Email: ${formData.email}
+Entreprise: ${formData.company || 'Non spécifiée'}
+Type de projet: ${projectTypes.find(p => p.value === formData.projectType)?.label || 'Non spécifié'}
+Budget: ${budgetRanges.find(b => b.value === formData.budget)?.label || 'Non spécifié'}
+Délai: ${timelines.find(t => t.value === formData.timeline)?.label || 'Non spécifié'}
+
+Message:
+${formData.message}
+        `.trim()
+      }
+      
+      console.log('Template parameters:', templateParams)
+      
+      // Send email
+      const result = await emailjs.send(serviceId, templateId, templateParams)
+      
+      console.log('EmailJS result:', result)
+      
+      // Success
       setIsSubmitted(true)
-    }, 2000)
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        projectType: '',
+        budget: '',
+        timeline: '',
+        message: ''
+      })
+      
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      
+      // Show user-friendly error message
+      alert(`Erreur lors de l'envoi: ${error.message || 'Problème technique'}. Veuillez réessayer ou nous contacter directement.`)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -64,17 +138,18 @@ const Contact = () => {
   ]
 
   const budgetRanges = [
-    { value: '1000-3000', label: '1 000€ - 3 000€' },
-    { value: '3000-7000', label: '3 000€ - 7 000€' },
-    { value: '7000-15000', label: '7 000€ - 15 000€' },
-    { value: '15000+', label: '15 000€+' }
+    { value: '400-800', label: '400€ - 800€' },
+    { value: '800-1500', label: '800€ - 1 500€' },
+    { value: '1500-3000', label: '1 500€ - 3 000€' },
+    { value: '3000+', label: '3 000€+' }
   ]
 
   const timelines = [
+    { value: '3-7-days', label: '3-7 jours' },
     { value: '1-2-weeks', label: '1-2 semaines' },
     { value: '3-4-weeks', label: '3-4 semaines' },
     { value: '1-2-months', label: '1-2 mois' },
-    { value: '3-months+', label: '3 mois et plus' }
+    { value: '3-months+', label: '3+ mois' }
   ]
 
   const faqs = [
@@ -110,7 +185,7 @@ const Contact = () => {
               <CheckCircle className="h-20 w-20 text-green-500 mx-auto mb-6" />
               <h1 className="text-3xl font-bold text-gray-900 mb-4">Message envoyé !</h1>
               <p className="text-xl text-gray-600 mb-8">
-                Merci pour votre message. Je vous répondrai dans les plus brefs délais, généralement sous 24h.
+                Merci pour votre message ! Je vous répondrai dans les plus brefs délais, généralement sous 24h.
               </p>
               <Button onClick={() => setIsSubmitted(false)} variant="outline">
                 Envoyer un autre message
