@@ -88,20 +88,13 @@ const Projects = () => {
                     </div>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+                    <div className="absolute bottom-4 left-4 right-4">
                       <a
                         href={project.demoUrl}
-                        className="flex-1 bg-white/90 hover:bg-white text-gray-900 px-4 py-2 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
+                        className="w-full bg-white/90 hover:bg-white text-gray-900 px-4 py-2 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
                       >
                         <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                      <a
-                        href={project.codeUrl}
-                        className="flex-1 bg-gray-900/90 hover:bg-gray-900 text-white px-4 py-2 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
-                      >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
+                        Voir le projet
                       </a>
                     </div>
                   </div>

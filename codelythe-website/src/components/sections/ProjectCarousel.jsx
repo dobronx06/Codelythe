@@ -140,20 +140,13 @@ const ProjectCarousel = ({
                 
                 {/* Overlay with links */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-6 left-6 right-6 flex gap-3">
+                  <div className="absolute bottom-6 left-6 right-6">
                     <a
                       href={current.demoUrl}
-                      className="flex-1 bg-white/90 hover:bg-white text-gray-900 px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
+                      className="w-full bg-white/90 hover:bg-white text-gray-900 px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Voir le projet
-                    </a>
-                    <a
-                      href={current.codeUrl}
-                      className="flex-1 bg-gray-900/90 hover:bg-gray-900 text-white px-4 py-3 rounded-lg font-medium text-center transition-colors flex items-center justify-center"
-                    >
-                      <Github className="h-4 w-4 mr-2" />
-                      Code source
                     </a>
                   </div>
                 </div>
