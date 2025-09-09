@@ -57,11 +57,11 @@ const Community = () => {
     { name: 'React', description: 'Interface utilisateur interactive' },
     { name: 'Node.js', description: 'Backend robuste et scalable' },
     { name: 'Socket.io', description: 'Communication temps réel' },
-    { name: 'GraphQL', description: 'API flexible et performante' },
+    { name: 'Svelte', description: 'Framework moderne et performant' },
     { name: 'PostgreSQL', description: 'Base de données relationnelle' },
-    { name: 'Redis', description: 'Cache et sessions' },
-    { name: 'AWS S3', description: 'Stockage de médias' },
-    { name: 'WebRTC', description: 'Communication vidéo/audio' }
+    { name: 'MongoDB', description: 'Base de données NoSQL flexible' },
+    { name: 'Tailwind CSS', description: 'Framework CSS utilitaire' },
+    { name: 'Docker', description: 'Conteneurisation et déploiement' }
   ]
 
   const benefits = [

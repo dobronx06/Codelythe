@@ -20,11 +20,12 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50 border-b border-gray-100">
       <nav className="container">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="p-2 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg group-hover:scale-110 transition-transform duration-200">
-              <Code className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold text-gradient">Codelythe</span>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src="/images/codelythe-logo-lg.png" 
+              alt="Codelythe" 
+              className="h-10 w-auto group-hover:scale-110 transition-transform duration-200"
+            />
           </Link>
 
           <div className="hidden md:flex space-x-1">

@@ -92,7 +92,7 @@ const Services = () => {
 
                   <Card.Footer>
                     <Link to={service.href} className="block w-full">
-                      <Button variant="outline" className="w-full group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600">
+                      <Button variant="outline" className="w-full group-hover:bg-primary-600 group-hover:border-primary-600">
                         En savoir plus
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>

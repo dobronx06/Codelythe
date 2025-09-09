@@ -21,7 +21,7 @@ const About = () => {
     {
       icon: Heart,
       title: 'Passion',
-      description: 'Chaque projet est abordé avec enthusiasm et dévouement pour dépasser vos attentes.'
+      description: 'Chaque projet est abordé avec enthousiasme et dévouement pour dépasser vos attentes.'
     },
     {
       icon: Award,

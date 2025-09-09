@@ -33,11 +33,11 @@ const AI = () => {
   const technologies = [
     { name: 'Python', description: 'Langage de référence pour l\'IA' },
     { name: 'OpenAI GPT', description: 'Modèles de langage avancés' },
-    { name: 'LangChain', description: 'Framework pour applications IA' },
+    { name: 'Intégrations JS Web', description: 'Intégration JavaScript de modèles IA' },
     { name: 'TensorFlow', description: 'Machine Learning et Deep Learning' },
     { name: 'Hugging Face', description: 'Modèles pré-entraînés' },
-    { name: 'Vector Databases', description: 'Stockage de données vectorielles' },
-    { name: 'FastAPI', description: 'APIs haute performance' },
+    { name: 'Claude API', description: 'Assistant IA conversationnel avancé' },
+    { name: 'Gemini API', description: 'APIs Google pour l\'intelligence artificielle' },
     { name: 'Docker', description: 'Conteneurisation et déploiement' }
   ]
 
@@ -58,9 +58,9 @@ const AI = () => {
       savings: '90% d\'erreurs en moins'
     },
     {
-      title: 'Trading Automatisé',
-      description: 'Bots de trading basés sur l\'analyse prédictive',
-      savings: 'ROI moyen de +25%'
+      title: 'Analyse de Sentiment',
+      description: 'Compréhension des émotions et opinions dans les textes',
+      savings: '80% d\'amélioration satisfaction client'
     }
   ]
 
