@@ -75,7 +75,7 @@ export const services = [
       "Design responsive"
     ],
     technologies: ["React", "Next.js", "Tailwind CSS", "Vite"],
-    price: "À partir de 400€",
+    price: "À partir de 300€",
     href: "/commerce"
   },
   {
@@ -90,7 +90,7 @@ export const services = [
       "Solutions IA sur mesure"
     ],
     technologies: ["Python", "OpenAI", "LangChain", "React"],
-    price: "À partir de 1000€",
+    price: "Sur devis",
     href: "/ai"
   },
   {
@@ -105,7 +105,7 @@ export const services = [
       "Systèmes d'évaluation et feedback"
     ],
     technologies: ["React", "Next.js", "Node.js", "GraphQL"],
-    price: "À partir de 1500€",
+    price: "Sur devis",
     href: "/community"
   }
 ]
