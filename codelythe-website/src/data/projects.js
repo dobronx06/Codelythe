@@ -44,7 +44,7 @@ export const projects = {
       image: "/images/JebIncubator.png",
       technologies: ["Next.js", "Express", "PostgreSQL", "Socket.io"],
       features: ["Profils détaillés", "Messagerie intégrée", "Dashboard analytics", "Système de matching"],
-      demoUrl: "#",
+      demoUrl: "https://jeb.logiconnect.fr/",
       codeUrl: "#",
       category: "Incubateur"
     },
