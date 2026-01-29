@@ -28,13 +28,13 @@ export const content = {
   work: {
     fr: {
       heading: 'Projets',
-      subheading: 'Ce que j\'ai construit — pour des clients et pour le plaisir.',
+      subheading: 'Ce que j\'ai construit, pour des clients et pour le plaisir.',
       tabClient: 'Travaux Client',
       tabSide: 'Projets Perso',
     },
     en: {
       heading: 'Work',
-      subheading: 'What I\'ve built — for clients and for fun.',
+      subheading: 'What I\'ve built, for clients and for fun.',
       tabClient: 'Client Work',
       tabSide: 'Side Projects',
     },
@@ -67,8 +67,8 @@ export const content = {
       heading: 'À propos',
       subheading: 'Qui est derrière le code.',
       bio: [
-        'Je suis Tom, développeur web full-stack, étudiant à Epitech Montpellier et dirigeant de Codelythe, mon auto-entreprise. Originaire de Perpignan, je construis des choses pour le web depuis que j\'ai découvert que le code peut donner vie à des idées — et ça ne s\'est jamais arrêté.',
-        'Ce qui me motive, c\'est de résoudre de vrais problèmes avec du code propre. Que ce soit une plateforme d\'IA pour gérer des agents, un outil éducatif qui génère des quiz, ou un site client qui convertit — j\'aime tout le processus, du premier wireframe au déploiement. J\'ai eu la chance de faire mes armes en entreprise avec un stage de 6 mois chez Elloha et un stage à temps partiel de 5 mois chez Hitopic.',
+        'Je suis Tom, développeur web full-stack, étudiant à Epitech Montpellier et dirigeant de Codelythe, mon auto-entreprise. Originaire de Perpignan, je construis des choses pour le web depuis que j\'ai découvert que le code peut donner vie à des idées. Et ça ne s\'est jamais arrêté.',
+        'Ce qui me motive, c\'est de résoudre de vrais problèmes avec du code propre. Que ce soit une plateforme d\'IA pour gérer des agents, un outil éducatif qui génère des quiz, ou un site client qui convertit, j\'aime tout le processus, du premier wireframe au déploiement. J\'ai eu la chance de faire mes armes en entreprise avec un stage de 6 mois chez Elloha et un stage à temps partiel de 5 mois chez Hitopic.',
         'En dehors du code, je suis curieux de tout ce qui touche à l\'IA, j\'aime partager ce que j\'apprends, et je cherche constamment à m\'améliorer. Je suis actuellement à la recherche d\'un stage de 4 mois pour mettre mes compétences en pratique dans un environnement professionnel.',
       ],
     },
@@ -76,8 +76,8 @@ export const content = {
       heading: 'About',
       subheading: 'The person behind the code.',
       bio: [
-        'I\'m Tom, a full-stack web developer, student at Epitech Montpellier and founder of Codelythe, my freelance business. Originally from Perpignan, I\'ve been building things for the web since I discovered that code can bring ideas to life — and I haven\'t stopped since.',
-        'What drives me is solving real problems with clean code. Whether it\'s an AI platform to manage agents, an educational tool that generates quizzes, or a client site that converts — I love the entire process from first wireframe to deployment. I\'ve had the chance to sharpen my skills with a 6-month internship at Elloha and a 5-month part-time internship at Hitopic.',
+        'I\'m Tom, a full-stack web developer, student at Epitech Montpellier and founder of Codelythe, my freelance business. Originally from Perpignan, I\'ve been building things for the web since I discovered that code can bring ideas to life. And I haven\'t stopped since.',
+        'What drives me is solving real problems with clean code. Whether it\'s an AI platform to manage agents, an educational tool that generates quizzes, or a client site that converts, I love the entire process from first wireframe to deployment. I\'ve had the chance to sharpen my skills with a 6-month internship at Elloha and a 5-month part-time internship at Hitopic.',
         'Outside of code, I\'m curious about everything AI, I enjoy sharing what I learn, and I\'m constantly pushing to improve. I\'m currently looking for a 4-month internship to put my skills to work in a professional environment.',
       ],
     },
@@ -89,11 +89,11 @@ export const content = {
       subheading: 'Prêt à rejoindre votre équipe.',
       badge: 'Disponible maintenant',
       title: 'Disponible pour un stage de 4 mois',
-      period: 'Mars – Juillet 2026',
+      period: 'Mars / Juillet 2026',
       description: 'À la recherche d\'une expérience en entreprise où je peux contribuer, apprendre et grandir en tant que développeur.',
       bullets: [
-        'Maîtrise de React, Node.js, TypeScript et de l\'écosystème web moderne',
-        'Expérience avec les APIs IA (OpenAI) et les outils d\'automatisation',
+        'Maîtrise de Next.js, Fastify, TypeScript, Supabase et de l\'écosystème web moderne',
+        'Expérience avec les APIs IA (OpenAI, Anthropic, Grok, Perplexity) et les outils d\'automatisation',
         'Habitué à travailler de manière autonome et à livrer des résultats concrets',
         'Apprentissage rapide, curieux et motivé par les défis techniques',
       ],
@@ -104,11 +104,11 @@ export const content = {
       subheading: 'Ready to join your team.',
       badge: 'Available now',
       title: 'Available for a 4-month internship',
-      period: 'March – July 2026',
+      period: 'March / July 2026',
       description: 'Looking for a company where I can contribute, learn, and grow as a developer.',
       bullets: [
-        'Proficient in React, Node.js, TypeScript, and the modern web ecosystem',
-        'Experience with AI APIs (OpenAI) and automation tools',
+        'Proficient in Next.js, Fastify, TypeScript, Supabase, and the modern web ecosystem',
+        'Experience with AI APIs (OpenAI, Anthropic, Grok, Perplexity) and automation tools',
         'Comfortable working autonomously and delivering real results',
         'Fast learner, curious, and driven by technical challenges',
       ],
@@ -292,7 +292,7 @@ export const timeline = [
     events: [
       {
         type: 'project',
-        title: { fr: 'Factories – Plateforme SaaS IA', en: 'Factories – AI SaaS Platform' },
+        title: { fr: 'Factories, Plateforme SaaS IA', en: 'Factories, AI SaaS Platform' },
         description: {
           fr: 'Création d\'une plateforme de génération et publication automatique d\'articles SEO avec auto-pilote et intégration WordPress.',
           en: 'Built an AI-powered platform for automated SEO article generation and publishing with auto-pilot and WordPress integration.',
@@ -314,7 +314,7 @@ export const timeline = [
     events: [
       {
         type: 'work',
-        title: { fr: 'Stage – Hitopic (5 mois, temps partiel)', en: 'Internship – Hitopic (5 months, part-time)' },
+        title: { fr: 'Stage Hitopic (5 mois, temps partiel)', en: 'Internship Hitopic (5 months, part-time)' },
         description: {
           fr: 'Stage de 5 mois les jeudis et vendredis en développement.',
           en: '5-month part-time internship (Thursdays & Fridays) in development.',
@@ -322,7 +322,7 @@ export const timeline = [
       },
       {
         type: 'work',
-        title: { fr: 'Judata – Développeur Full-Stack', en: 'Judata – Full-Stack Developer' },
+        title: { fr: 'Judata, Développeur Full-Stack', en: 'Judata, Full-Stack Developer' },
         description: {
           fr: 'Application de suivi de combats pour judokas. 125+ utilisateurs actifs.',
           en: 'Fight tracking app for judokas. 125+ active users.',
@@ -362,7 +362,7 @@ export const timeline = [
       },
       {
         type: 'project',
-        title: { fr: 'QuizGen IA – 1er prix Hackathon GenAI', en: 'QuizGen IA – 1st Place GenAI Hackathon' },
+        title: { fr: 'QuizGen IA, 1er prix Hackathon GenAI', en: 'QuizGen IA, 1st Place GenAI Hackathon' },
         description: {
           fr: 'Générateur de quiz multijoueur par IA. Victoire au hackathon GenAI Epitech.',
           en: 'AI-powered multiplayer quiz generator. Won the Epitech GenAI hackathon.',
@@ -370,7 +370,7 @@ export const timeline = [
       },
       {
         type: 'project',
-        title: { fr: 'PINKCC Challenge – Finaliste', en: 'PINKCC Challenge – Finalist' },
+        title: { fr: 'PINKCC Challenge, Finaliste', en: 'PINKCC Challenge, Finalist' },
         description: {
           fr: 'Compétition IA médicale de 10 semaines. Segmentation de tumeurs sur CT scans avec UNet/MONAI. Face à Stanford, PhDs et chercheurs.',
           en: '10-week medical AI competition. Tumor segmentation on CT scans with UNet/MONAI. Competed against Stanford, PhDs and researchers.',
@@ -399,7 +399,7 @@ export const timeline = [
       },
       {
         type: 'work',
-        title: { fr: 'Stage – Elloha (6 mois)', en: 'Internship – Elloha (6 months)' },
+        title: { fr: 'Stage Elloha (6 mois)', en: 'Internship Elloha (6 months)' },
         description: {
           fr: 'Stage de 6 mois en développement web.',
           en: '6-month internship in web development.',
@@ -453,7 +453,7 @@ export const techStack = {
   },
   ai: {
     label: 'AI / ML',
-    items: ['OpenAI API', 'Hugging Face', 'RAG', 'MONAI'],
+    items: ['OpenAI API', 'Anthropic API', 'Grok API', 'Perplexity API', 'Hugging Face', 'RAG', 'MONAI'],
   },
   tools: {
     label: 'Tools',
