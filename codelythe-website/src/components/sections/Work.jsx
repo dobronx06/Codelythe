@@ -20,18 +20,21 @@ function ProjectRow({ project, index, lang }) {
     >
       {/* Image */}
       <div className="flex-1">
-        <div className="overflow-hidden rounded-2xl border border-[#2e5a3f] bg-[#1a3a2a]">
+        <div className={`overflow-hidden rounded-2xl border border-[#2e5a3f] bg-[#1a3a2a] ${project.imageSquare ? 'flex aspect-video items-center justify-center p-8' : ''}`}>
           <img
             src={project.image}
             alt={project.title}
-            className="aspect-video w-full object-cover transition-transform hover:scale-[1.02]"
+            className={project.imageSquare
+              ? 'h-full w-auto rounded-xl object-contain drop-shadow-2xl transition-transform hover:scale-105'
+              : 'aspect-video w-full object-cover transition-transform hover:scale-[1.02]'
+            }
             onError={(e) => {
               e.target.style.display = 'none'
               e.target.nextSibling.style.display = 'flex'
             }}
           />
           <div
-            className="hidden aspect-video w-full items-center justify-center bg-[#224433] text-4xl font-bold text-[#3a7050]"
+            className={`hidden items-center justify-center bg-[#224433] text-4xl font-bold text-[#3a7050] ${project.imageSquare ? 'h-32 w-32 rounded-xl' : 'aspect-video w-full'}`}
             style={{ display: 'none' }}
           >
             {project.title[0]}
