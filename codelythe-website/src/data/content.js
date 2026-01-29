@@ -205,7 +205,7 @@ export const projects = {
     },
     {
       id: 'bouger-apprendre',
-      title: 'Bouger&Apprendre',
+      title: 'Bouge&Apprends',
       type: { fr: 'Application Éducative', en: 'Educational App' },
       role: { fr: 'Développeur (via Devify)', en: 'Developer (via Devify)' },
       description: {
@@ -338,7 +338,7 @@ export const timeline = [
       },
       {
         type: 'work',
-        title: { fr: 'Bouger&Apprendre (via Devify)', en: 'Bouger&Apprendre (via Devify)' },
+        title: { fr: 'Bouge&Apprends (via Devify)', en: 'Bouge&Apprends (via Devify)' },
         description: {
           fr: 'Application éducative alliant mouvement et apprentissage.',
           en: 'Educational app combining movement and learning.',
