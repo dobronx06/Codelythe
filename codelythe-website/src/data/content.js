@@ -196,8 +196,8 @@ export const projects = {
       type: { fr: 'Projet Entreprise', en: 'Enterprise Project' },
       role: { fr: 'Développeur Frontend (via Told)', en: 'Frontend Developer (via Told)' },
       description: {
-        fr: 'Développement du backoffice d\'une application de recommandation alimentaire pour chats et chiens.',
-        en: 'Built the back-office for a pet food recommendation app for cats and dogs.',
+        fr: 'Mission frontend de 2 mois : développement du backoffice d\'une application de recommandation alimentaire pour chats et chiens.',
+        en: '2-month frontend mission: built the back-office for a pet food recommendation app for cats and dogs.',
       },
       tech: ['React', 'TypeScript'],
       image: '/images/royal-canin.png',
@@ -209,8 +209,8 @@ export const projects = {
       type: { fr: 'Application Éducative', en: 'Educational App' },
       role: { fr: 'Développeur (via Devify)', en: 'Developer (via Devify)' },
       description: {
-        fr: 'Application éducative combinant activité physique et apprentissage, développée en collaboration avec l\'agence Devify.',
-        en: 'Educational app combining physical activity and learning, developed in collaboration with Devify agency.',
+        fr: 'Mission full-stack d\'un mois : développement d\'une application éducative combinant activité physique et apprentissage, via l\'agence Devify.',
+        en: '1-month full-stack mission: development of an educational app combining physical activity and learning, via Devify agency.',
       },
       tech: ['Vue.js', 'Nuxt', 'NuxtUI', 'Fastify'],
       image: '/images/B&A.png',
@@ -218,6 +218,19 @@ export const projects = {
     },
   ],
   side: [
+    {
+      id: 'factories',
+      title: 'Factories',
+      type: { fr: 'Plateforme SaaS', en: 'SaaS Platform' },
+      role: { fr: 'Créateur & Développeur', en: 'Creator & Developer' },
+      description: {
+        fr: 'Plateforme de génération et publication automatique d\'articles SEO via IA. Auto-pilote, intégration WordPress multi-sites, scoring qualité et planification intelligente.',
+        en: 'AI-powered platform for automated SEO article generation and publishing. Auto-pilot mode, multi-site WordPress integration, quality scoring and smart scheduling.',
+      },
+      tech: ['Next.js', 'Supabase', 'Fastify', 'OpenAI'],
+      image: '/images/factories.png',
+      url: null,
+    },
     {
       id: 'aigent-hub',
       title: 'Aigent Hub',
@@ -277,6 +290,14 @@ export const timeline = [
   {
     year: '2026',
     events: [
+      {
+        type: 'project',
+        title: { fr: 'Factories – Plateforme SaaS IA', en: 'Factories – AI SaaS Platform' },
+        description: {
+          fr: 'Création d\'une plateforme de génération et publication automatique d\'articles SEO avec auto-pilote et intégration WordPress.',
+          en: 'Built an AI-powered platform for automated SEO article generation and publishing with auto-pilot and WordPress integration.',
+        },
+      },
       {
         type: 'milestone',
         title: { fr: 'Recherche de stage', en: 'Internship search' },
