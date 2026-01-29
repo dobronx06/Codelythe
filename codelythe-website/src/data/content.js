@@ -69,7 +69,7 @@ export const content = {
       bio: [
         'Je suis Tom, développeur web full-stack, étudiant à Epitech Montpellier et dirigeant de Codelythe, mon auto-entreprise. Originaire de Perpignan, je construis des choses pour le web depuis que j\'ai découvert que le code peut donner vie à des idées. Et ça ne s\'est jamais arrêté.',
         'Ce qui me motive, c\'est de résoudre de vrais problèmes avec du code propre. Que ce soit une plateforme d\'IA pour gérer des agents, un outil éducatif qui génère des quiz, ou un site client qui convertit, j\'aime tout le processus, du premier wireframe au déploiement. J\'ai eu la chance de faire mes armes en entreprise avec un stage de 6 mois chez Elloha et un stage à temps partiel de 5 mois chez Hitopic.',
-        'En dehors du code, je suis curieux de tout ce qui touche à l\'IA, j\'aime partager ce que j\'apprends, et je cherche constamment à m\'améliorer. Je suis actuellement à la recherche d\'un stage de 4 mois pour mettre mes compétences en pratique dans un environnement professionnel.',
+        'En dehors du code, je suis curieux de tout ce qui touche à l\'IA, j\'aime partager ce que j\'apprends, et je cherche constamment à m\'améliorer. Je suis actuellement à la recherche d\'un stage de 5 mois pour mettre mes compétences en pratique dans un environnement professionnel.',
       ],
     },
     en: {
@@ -78,7 +78,7 @@ export const content = {
       bio: [
         'I\'m Tom, a full-stack web developer, student at Epitech Montpellier and founder of Codelythe, my freelance business. Originally from Perpignan, I\'ve been building things for the web since I discovered that code can bring ideas to life. And I haven\'t stopped since.',
         'What drives me is solving real problems with clean code. Whether it\'s an AI platform to manage agents, an educational tool that generates quizzes, or a client site that converts, I love the entire process from first wireframe to deployment. I\'ve had the chance to sharpen my skills with a 6-month internship at Elloha and a 5-month part-time internship at Hitopic.',
-        'Outside of code, I\'m curious about everything AI, I enjoy sharing what I learn, and I\'m constantly pushing to improve. I\'m currently looking for a 4-month internship to put my skills to work in a professional environment.',
+        'Outside of code, I\'m curious about everything AI, I enjoy sharing what I learn, and I\'m constantly pushing to improve. I\'m currently looking for a 5-month internship to put my skills to work in a professional environment.',
       ],
     },
   },
@@ -88,7 +88,7 @@ export const content = {
       heading: 'Stage',
       subheading: 'Prêt à rejoindre votre équipe.',
       badge: 'Disponible maintenant',
-      title: 'Disponible pour un stage de 4 mois',
+      title: 'Disponible pour un stage de 5 mois',
       period: 'Mars / Juillet 2026',
       description: 'À la recherche d\'une expérience en entreprise où je peux contribuer, apprendre et grandir en tant que développeur.',
       bullets: [
@@ -103,7 +103,7 @@ export const content = {
       heading: 'Internship',
       subheading: 'Ready to join your team.',
       badge: 'Available now',
-      title: 'Available for a 4-month internship',
+      title: 'Available for a 5-month internship',
       period: 'March / July 2026',
       description: 'Looking for a company where I can contribute, learn, and grow as a developer.',
       bullets: [
@@ -302,8 +302,8 @@ export const timeline = [
         type: 'milestone',
         title: { fr: 'Recherche de stage', en: 'Internship search' },
         description: {
-          fr: 'À la recherche d\'un stage de 4 mois (mars–juillet 2026) en développement web / IA.',
-          en: 'Looking for a 4-month internship (March–July 2026) in web development / AI.',
+          fr: 'À la recherche d\'un stage de 5 mois (mars–juillet 2026) en développement web / IA.',
+          en: 'Looking for a 5-month internship (March–July 2026) in web development / AI.',
         },
         pulse: true,
       },
