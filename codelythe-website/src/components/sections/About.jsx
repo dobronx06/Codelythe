@@ -58,7 +58,7 @@ export default function About() {
               ))}
             </div>
 
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href={lang === 'fr' ? '/cv-fr.pdf' : '/cv-en.pdf'} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               {t.cvCta}
             </a>
           </motion.div>

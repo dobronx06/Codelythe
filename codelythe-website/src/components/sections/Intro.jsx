@@ -157,7 +157,7 @@ export default function Intro({ onContact }) {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg-creme)]" style={{ padding: '140px 32px 80px' }}>
       <canvas ref={canvasRef} className="pointer-events-none absolute inset-0" />
 
-      <div className="relative z-10 text-center max-w-4xl mx-auto">
+      <div className="relative z-10 text-left max-w-5xl mx-auto">
         {/* Kicker pill */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -205,7 +205,7 @@ export default function Intro({ onContact }) {
           >
             {heroData.workCta}
           </button>
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+          <a href={lang === 'fr' ? '/cv-fr.pdf' : '/cv-en.pdf'} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
             {heroData.cvCta}
           </a>
         </motion.div>
