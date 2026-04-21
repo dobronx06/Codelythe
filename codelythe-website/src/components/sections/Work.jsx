@@ -1,132 +1,112 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 import { useLanguage } from '../../hooks/useLanguage'
-import { content, projects } from '../../data/content'
-import SectionHeading from '../ui/SectionHeading'
+import { content } from '../../data/content'
 
-function ProjectRow({ project, index, lang }) {
+function FeaturedRow({ project, index, lang }) {
   const isReversed = index % 2 !== 0
 
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 32 }}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.7, delay: index * 0.1 }}
       viewport={{ once: true, margin: '-80px' }}
-      className={`flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-16 ${
-        isReversed ? 'lg:flex-row-reverse' : ''
+      className={`grid gap-16 items-center ${
+        isReversed ? 'lg:grid-cols-[1fr_1.15fr]' : 'lg:grid-cols-[1.15fr_1fr]'
       }`}
     >
-      {/* Image */}
-      <div className="flex-1">
-        <div className={`overflow-hidden rounded-2xl border border-[#2e5a3f] bg-[#1a3a2a] ${project.imageSquare ? 'flex aspect-video items-center justify-center p-8' : ''}`}>
+      {/* Media */}
+      <div className={`${isReversed ? 'lg:order-2' : ''}`}>
+        <div className="relative rounded-[20px] overflow-hidden border border-[var(--border-warm)] bg-[var(--bg-creme-deep)] aspect-[16/10] transition-all duration-400 hover:-translate-y-1 hover:shadow-[0_40px_80px_-40px_rgba(10,26,18,0.35)]">
+          {project.tag && (
+            <span className="absolute top-4 left-4 z-[2] px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-sm text-[11px] font-medium tracking-[0.1em] uppercase text-[var(--ink-strong)] border border-[rgba(10,26,18,0.08)]">
+              {project.tag[lang]}
+            </span>
+          )}
           <img
             src={project.image}
             alt={project.title}
-            className={project.imageSquare
-              ? 'h-full w-auto rounded-xl object-contain drop-shadow-2xl transition-transform hover:scale-105'
-              : 'aspect-video w-full object-cover transition-transform hover:scale-[1.02]'
-            }
-            onError={(e) => {
-              e.target.style.display = 'none'
-              e.target.nextSibling.style.display = 'flex'
-            }}
+            className={`w-full h-full ${project.imageSquare ? 'object-contain p-[14%]' : 'object-cover object-top'}`}
           />
-          <div
-            className={`hidden items-center justify-center bg-[#224433] text-4xl font-bold text-[#3a7050] ${project.imageSquare ? 'h-32 w-32 rounded-xl' : 'aspect-video w-full'}`}
-            style={{ display: 'none' }}
-          >
-            {project.title[0]}
-          </div>
         </div>
       </div>
 
-      {/* Info */}
-      <div className="flex-1 space-y-4">
-        <div className="flex items-center gap-3">
-          <span className="tech-pill">{project.type[lang]}</span>
-          {project.metric && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-700">
-              {project.metric} {project.metricLabel[lang]}
-            </span>
-          )}
+      {/* Body */}
+      <div className={`${isReversed ? 'lg:order-1' : ''}`}>
+        <div className="font-display font-bold text-[11px] tracking-[0.22em] text-[var(--ink-dim)] mb-5">
+          {String(index + 1).padStart(2, '0')} / {String(content.featured.items.length).padStart(2, '0')}
         </div>
-
-        <h3 className="font-display text-2xl font-bold text-[#0a1a12] lg:text-3xl">
+        <h3 className="font-display font-bold text-[clamp(28px,4vw,40px)] tracking-[-0.015em] text-[var(--ink-strong)] leading-[1.05] mb-3">
           {project.title}
         </h3>
-
-        <p className="text-sm text-[#7a8a74]">{project.role[lang]}</p>
-
-        <p className="leading-relaxed text-[#4a5d4f]">
-          {project.description[lang]}
+        <p className="text-[18px] text-[var(--ink)] leading-[1.45] mb-4">
+          {project.tagline[lang]}
+        </p>
+        <p className="text-[15px] text-[var(--ink-dim)] leading-[1.6] mb-6">
+          {project.blurb[lang]}
         </p>
 
-        <div className="flex flex-wrap gap-2">
-          {project.tech.map((t) => (
-            <span key={t} className="tech-pill">
-              {t}
-            </span>
+        {/* Stack pills */}
+        <div className="flex flex-wrap gap-1.5 mb-7">
+          {project.stack.map((t) => (
+            <span key={t} className="tech-pill">{t}</span>
           ))}
         </div>
 
-        {project.url && (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 transition-colors hover:text-emerald-500"
-          >
-            {lang === 'fr' ? 'Voir le projet' : 'View project'}
-            <ExternalLink size={14} />
-          </a>
+        {/* Metric */}
+        {project.metric && (
+          <div className="inline-flex items-baseline gap-3 mb-7 pl-4 border-l-2 border-[var(--accent)]">
+            <span className="font-display font-bold text-[clamp(28px,4vw,40px)] text-[var(--accent-deep)] tracking-[-0.02em] leading-none">
+              {project.metric.value}
+            </span>
+            <span className="text-[13px] text-[var(--ink-dim)]">
+              {project.metric.label[lang]}
+            </span>
+          </div>
         )}
+
+        {/* Actions */}
+        <div className="flex gap-2.5">
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost"
+            >
+              {lang === 'fr' ? 'Voir le projet' : 'View project'}
+              <ExternalLink size={14} />
+            </a>
+          )}
+        </div>
       </div>
-    </motion.article>
+    </motion.div>
   )
 }
 
 export default function Work() {
   const { lang } = useLanguage()
-  const t = content.work[lang]
-  const [tab, setTab] = useState('client')
-
-  const tabs = [
-    { key: 'client', label: t.tabClient },
-    { key: 'side', label: t.tabSide },
-  ]
-
-  const currentProjects = projects[tab]
+  const t = content.featured[lang]
 
   return (
     <section id="work" className="section-padding">
-      <div className="mx-auto max-w-6xl px-6">
-        <SectionHeading heading={t.heading} subheading={t.subheading} />
-
-        {/* Tab switcher */}
-        <div className="mb-16 flex justify-center">
-          <div className="inline-flex rounded-full border border-[#2e5a3f] bg-[#1a3a2a] p-1">
-            {tabs.map(({ key, label }) => (
-              <button
-                key={key}
-                onClick={() => setTab(key)}
-                className={`rounded-full px-6 py-2 text-sm font-medium transition-all ${
-                  tab === key
-                    ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25'
-                    : 'text-[#6b7a64] hover:text-[#f0ebe3]'
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+      <div className="container">
+        {/* Section head */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-20">
+          <div>
+            <span className="eyebrow">{t.eyebrow}</span>
+            <h2 className="font-display font-bold text-[clamp(40px,5vw,64px)] tracking-[-0.025em] leading-[1.02] text-[var(--ink-strong)] mt-3">
+              {t.head}
+            </h2>
           </div>
+          <p className="text-[17px] text-[var(--ink-dim)] max-w-[44ch]">{t.sub}</p>
         </div>
 
-        {/* Project list */}
-        <div className="space-y-24">
-          {currentProjects.map((project, i) => (
-            <ProjectRow key={project.id} project={project} index={i} lang={lang} />
+        {/* Featured rows */}
+        <div className="flex flex-col gap-24">
+          {content.featured.items.map((project, i) => (
+            <FeaturedRow key={project.id} project={project} index={i} lang={lang} />
           ))}
         </div>
       </div>

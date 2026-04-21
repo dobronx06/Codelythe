@@ -5,9 +5,9 @@ import { useScrollSpy } from '../../hooks/useScrollSpy'
 import { content } from '../../data/content'
 import LanguageToggle from '../ui/LanguageToggle'
 
-const SECTIONS = ['work', 'journey', 'stack', 'about', 'contact']
+const SECTIONS = ['work', 'about', 'stack']
 
-export default function Navbar() {
+export default function Navbar({ onContact }) {
   const { lang } = useLanguage()
   const activeId = useScrollSpy(SECTIONS)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -29,15 +29,15 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#f0ebe3]/80 backdrop-blur-lg border-b border-[#d4cdc3]/60 shadow-sm">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg-creme)]/80 backdrop-blur-lg border-b border-[var(--border-warm)]/60">
+        <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-4">
           <a
             href="#"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
-            className="font-display text-lg font-bold tracking-tight text-[#0a1a12]"
+            className="font-display text-[17px] font-bold tracking-[-0.02em] text-[var(--ink-strong)]"
           >
             CODELYTHE
           </a>
@@ -48,16 +48,22 @@ export default function Navbar() {
               <button
                 key={id}
                 onClick={() => handleClick(id)}
-                className={`text-sm font-medium transition-colors ${
+                className={`text-[13px] font-medium transition-colors ${
                   activeId === id
-                    ? 'text-emerald-600'
-                    : 'text-[#7a8a74] hover:text-[#0a1a12]'
+                    ? 'text-[var(--accent-deep)]'
+                    : 'text-[var(--ink-dim)] hover:text-[var(--ink-strong)]'
                 }`}
               >
                 {nav[id]}
               </button>
             ))}
             <LanguageToggle />
+            <button
+              onClick={onContact}
+              className="btn btn-primary !py-2 !px-4 !text-[13px]"
+            >
+              {nav.contact}
+            </button>
           </div>
 
           {/* Mobile toggle */}
@@ -65,7 +71,7 @@ export default function Navbar() {
             <LanguageToggle />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="text-[#7a8a74] hover:text-[#0a1a12]"
+              className="text-[var(--ink-dim)] hover:text-[var(--ink-strong)]"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -74,9 +80,9 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* Mobile menu - outside header to avoid backdrop-filter stacking context */}
+      {/* Mobile menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 top-[60px] z-40 bg-[#f0ebe3] md:hidden">
+        <div className="fixed inset-0 top-[60px] z-40 bg-[var(--bg-creme)] md:hidden">
           <div className="flex flex-col items-center gap-8 pt-16">
             {SECTIONS.map((id) => (
               <button
@@ -84,13 +90,19 @@ export default function Navbar() {
                 onClick={() => handleClick(id)}
                 className={`text-lg font-medium transition-colors ${
                   activeId === id
-                    ? 'text-emerald-600'
-                    : 'text-[#7a8a74] hover:text-[#0a1a12]'
+                    ? 'text-[var(--accent-deep)]'
+                    : 'text-[var(--ink-dim)] hover:text-[var(--ink-strong)]'
                 }`}
               >
                 {nav[id]}
               </button>
             ))}
+            <button
+              onClick={() => { setMobileOpen(false); onContact() }}
+              className="btn btn-primary"
+            >
+              {nav.contact}
+            </button>
           </div>
         </div>
       )}

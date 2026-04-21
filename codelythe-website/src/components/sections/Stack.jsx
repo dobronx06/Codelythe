@@ -1,43 +1,49 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../../hooks/useLanguage'
-import { content, techStack } from '../../data/content'
-import SectionHeading from '../ui/SectionHeading'
+import { content } from '../../data/content'
+import { StackIcon } from '../../data/stack-icons'
 
 export default function Stack() {
   const { lang } = useLanguage()
   const t = content.stack[lang]
 
-  const categories = Object.entries(techStack)
-
   return (
-    <section id="stack" className="section-padding">
-      <div className="mx-auto max-w-4xl px-6">
-        <SectionHeading heading={t.heading} subheading={t.subheading} />
+    <section id="stack" className="bg-[var(--bg-forest)] text-[#f5f1ea]" style={{ padding: '120px 0' }}>
+      <div className="container">
+        {/* Section head */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-16">
+          <div>
+            <span className="eyebrow text-[#a8b5a0]">{t.eyebrow}</span>
+            <h2 className="font-display font-bold text-[clamp(32px,4vw,48px)] tracking-[-0.025em] leading-[1.02] text-[#f5f1ea] mt-3">
+              {t.head}
+            </h2>
+          </div>
+          <p className="text-[17px] text-[#a8b5a0] max-w-[44ch]">{t.sub}</p>
+        </div>
 
-        <div className="space-y-10">
-          {categories.map(([key, category], catIndex) => (
+        {/* Stack rows */}
+        <div className="border-t border-[var(--border-forest)]">
+          {content.stack.groups.map((group, gi) => (
             <motion.div
-              key={key}
-              initial={{ opacity: 0, y: 20 }}
+              key={group.key}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: catIndex * 0.1 }}
-              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: gi * 0.08 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-[180px_1fr] items-start py-7 border-b border-[var(--border-forest)]"
             >
-              <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-[#7a8a74]">
-                {category.label}
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {category.items.map((item, i) => (
-                  <motion.span
-                    key={item}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: catIndex * 0.1 + i * 0.05 }}
-                    viewport={{ once: true }}
-                    className="tech-pill"
+              <div className="text-[13px] font-semibold tracking-[0.14em] uppercase text-[var(--accent-light)] pt-2 mb-3 md:mb-0">
+                {group.label[lang]}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item.n}
+                    className="inline-flex items-center gap-2 px-3.5 py-[7px] rounded-full bg-white/[0.04] border border-[var(--border-forest-2)] text-[13px] text-[#f5f1ea]"
                   >
-                    {item}
-                  </motion.span>
+                    <StackIcon name={item.ic} className="text-[#f5f1ea] opacity-90" />
+                    {item.n}
+                  </span>
                 ))}
               </div>
             </motion.div>

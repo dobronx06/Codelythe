@@ -1,154 +1,211 @@
 @import "tailwindcss";
 
-* {
-  box-sizing: border-box;
+/* ─── Fonts ─── */
+@font-face {
+  font-family: 'Panchang';
+  src: url('./assets/fonts/Panchang_Complete/Fonts/WEB/fonts/Panchang-Variable.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+  font-style: normal;
 }
 
-html {
-  scroll-behavior: smooth;
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi-font-family/Nohemi-Regular-BF6438cc579d934.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
 }
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi-font-family/Nohemi-Medium-BF6438cc57ddecd.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi-font-family/Nohemi-SemiBold-BF6438cc57db2ff.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi-font-family/Nohemi-Bold-BF6438cc577b524.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi-font-family/Nohemi-ExtraBold-BF6438cc5761ae2.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi-font-family/Nohemi-Light-BF6438cc5702321.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+/* ─── CSS Variables ─── */
+:root {
+  --font-display: 'Panchang', system-ui, sans-serif;
+  --font-body: 'Nohemi', 'Inter', system-ui, sans-serif;
+
+  --accent: #10b981;
+  --accent-light: #6ee7b7;
+  --accent-deep: #047857;
+  --accent-deeper: #064e3b;
+
+  --bg-creme: #f0ebe3;
+  --bg-creme-deep: #e6e0d6;
+  --bg-forest: #0a1a12;
+  --bg-forest-2: #0f2218;
+
+  --border-warm: #d4cdc3;
+  --border-forest: #1e3a28;
+  --border-forest-2: #2e5a3f;
+
+  --ink: #3d5347;
+  --ink-strong: #0a1a12;
+  --ink-dim: #7a8a74;
+}
+
+/* ─── Base ─── */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #f0ebe3;
-  color: #1a2e23;
+  font-family: var(--font-body);
+  background-color: var(--bg-creme);
+  color: var(--ink-strong);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Selection */
 ::selection {
   background-color: rgba(52, 211, 153, 0.2);
-  color: #1a2e23;
+  color: var(--ink-strong);
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #f0ebe3;
-}
-::-webkit-scrollbar-thumb {
-  background: #c5bdb2;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #9a9389;
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-creme); }
+::-webkit-scrollbar-thumb { background: #c5bdb2; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9a9389; }
+
+/* ─── Container utilities ─── */
+.container { max-width: 1200px; margin-inline: auto; padding-inline: 32px; }
+.container-sm { max-width: 960px; margin-inline: auto; padding-inline: 32px; }
+.container-xs { max-width: 720px; margin-inline: auto; padding-inline: 32px; }
+
+/* ─── Typography atoms ─── */
+.eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
 }
 
-/* Section utility */
+/* ─── Section utility ─── */
 .section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
-@media (min-width: 1024px) {
-  .section-padding {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
+/* ─── Buttons ─── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
-
-/* Glass card */
-.glass {
-  background: rgba(18, 43, 28, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid #2e5a3f;
+.btn-primary {
+  background: var(--accent-deep);
+  color: #fff;
+  border-color: var(--accent-deep);
+  box-shadow: 0 8px 24px rgba(16,185,129,0.28);
 }
-
-/* Timeline line draw */
-.timeline-line {
-  background: linear-gradient(to bottom, #34d399, #34d399 50%, transparent);
+.btn-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px rgba(16,185,129,0.38);
+  transform: translateY(-1px);
 }
+.btn-secondary {
+  background: rgba(255,255,255,0.55);
+  color: var(--ink-strong);
+  border-color: rgba(10,26,18,0.14);
+  backdrop-filter: blur(8px);
+}
+.btn-secondary:hover { background: #fff; border-color: var(--ink-strong); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-strong);
+  border-color: rgba(10,26,18,0.18);
+}
+.btn-ghost:hover { background: rgba(10,26,18,0.05); }
 
-/* Tech pill - works on both crème and dark backgrounds */
+/* Dark button variants */
+.btn.on-dark.btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 8px 24px rgba(16,185,129,0.3); }
+.btn.on-dark.btn-primary:hover { background: var(--accent-deep); }
+.btn.on-dark.btn-secondary { background: rgba(255,255,255,0.08); color: #f5f1ea; border-color: rgba(255,255,255,0.18); backdrop-filter: blur(8px); }
+.btn.on-dark.btn-secondary:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.28); }
+
+/* ─── Tech pill ─── */
 .tech-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: #059669;
-  font-size: 0.75rem;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(16,185,129,0.08);
+  border: 1px solid rgba(16,185,129,0.25);
+  color: var(--accent-deep);
+  font-size: 11px;
   font-weight: 500;
-  background: rgba(16, 185, 129, 0.08);
   transition: all 0.2s;
 }
-
 .tech-pill:hover {
-  border-color: rgba(16, 185, 129, 0.5);
-  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16,185,129,0.5);
+  background: rgba(16,185,129,0.15);
 }
 
-/* Tech pill on dark backgrounds */
-.dark-section .tech-pill {
-  color: #34d399;
-  border-color: rgba(52, 211, 153, 0.25);
-  background: rgba(52, 211, 153, 0.08);
+/* ─── Credibility ticker ─── */
+@keyframes tickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ─── PINKCC scanline ─── */
+@keyframes scan {
+  0%,100% { top: 8%; opacity: 0.8; }
+  50%     { top: 92%; opacity: 1; }
 }
 
-.dark-section .tech-pill:hover {
-  border-color: rgba(52, 211, 153, 0.5);
-  background: rgba(52, 211, 153, 0.15);
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
 }
+.reveal.in { opacity: 1; transform: translateY(0); }
 
-/* Logo carousel */
-@keyframes scrolling {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-.logo-carousel {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  display: flex;
-}
-
-.logo-group {
-  display: flex;
-  gap: 3rem;
-  padding-right: 3rem;
-  flex-shrink: 0;
-  will-change: transform;
-  animation: scrolling 18s linear infinite;
-}
-
-.logo-carousel:hover .logo-group {
-  animation-play-state: paused;
-}
-
-.logo-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 6rem;
-  width: 12rem;
-  flex-shrink: 0;
-  filter: grayscale(1) brightness(1.5);
-  opacity: 0.4;
-  transition: all 0.3s;
-}
-
-.logo-item:hover {
-  filter: grayscale(0) brightness(1);
-  opacity: 1;
-}
-
-.logo-fallback {
-  display: none;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #6b7a64;
-}
-
-/* Focus styles */
+/* ─── Focus styles ─── */
 :focus-visible {
-  outline: 2px solid #10b981;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 720px) {
+  .container, .container-sm, .container-xs { padding-inline: 20px; }
+  .section-padding { padding-top: 80px; padding-bottom: 80px; }
 }

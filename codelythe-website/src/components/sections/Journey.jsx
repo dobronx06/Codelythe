@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { useLanguage } from '../../hooks/useLanguage'
 import { content, timeline } from '../../data/content'
-import SectionHeading from '../ui/SectionHeading'
 
 const TYPE_COLORS = {
   education: 'bg-blue-500',
@@ -30,14 +29,13 @@ function TimelineEvent({ event, lang, index }) {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="relative pl-8"
     >
-      {/* Dot */}
       <div
         className={`absolute left-0 top-1.5 h-3 w-3 rounded-full ${TYPE_COLORS[event.type]} ring-4 ${TYPE_RING[event.type]} ${
           event.pulse ? 'animate-pulse-soft' : ''
         }`}
       />
 
-      <h4 className="font-display text-base font-semibold text-[#f0ebe3]">
+      <h4 className="font-display text-base font-semibold text-[#f5f1ea]">
         {event.title[lang]}
       </h4>
       <p className="mt-1 text-sm leading-relaxed text-[#a8b5a0]">
@@ -54,9 +52,13 @@ export default function Journey() {
   const lineInView = useInView(lineRef, { once: true, margin: '-100px' })
 
   return (
-    <section id="journey" className="dark-section section-padding bg-[#1a3a2a]">
-      <div className="mx-auto max-w-3xl px-6">
-        <SectionHeading heading={t.heading} subheading={t.subheading} dark />
+    <section id="journey" className="bg-[var(--bg-forest)] text-[#f5f1ea]" style={{ padding: '120px 0' }}>
+      <div className="container-xs">
+        {/* Section heading */}
+        <div className="text-center mb-16">
+          <span className="eyebrow text-[#a8b5a0]">{t.heading}</span>
+          <p className="text-[17px] text-[#a8b5a0] mt-3">{t.subheading}</p>
+        </div>
 
         {/* Legend */}
         <div className="mb-12 flex flex-wrap justify-center gap-4">
@@ -75,8 +77,7 @@ export default function Journey() {
 
         {/* Timeline */}
         <div ref={lineRef} className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-[5px] top-0 bottom-0 w-px bg-[#2e5a3f]">
+          <div className="absolute left-[5px] top-0 bottom-0 w-px bg-[var(--border-forest-2)]">
             <motion.div
               initial={{ height: '0%' }}
               animate={lineInView ? { height: '100%' } : {}}
@@ -89,7 +90,7 @@ export default function Journey() {
             {timeline.map((yearGroup) => (
               <div key={yearGroup.year}>
                 <div className="mb-6 pl-8">
-                  <span className="font-display text-2xl font-bold text-emerald-400">
+                  <span className="font-display text-2xl font-bold text-[var(--accent-light)]">
                     {yearGroup.year}
                   </span>
                 </div>

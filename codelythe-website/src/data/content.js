@@ -1,289 +1,241 @@
 export const content = {
   nav: {
-    fr: {
-      work: 'Projets',
-      journey: 'Parcours',
-      stack: 'Stack',
-      about: 'À propos',
-      contact: 'Contact',
-    },
-    en: {
-      work: 'Work',
-      journey: 'Journey',
-      stack: 'Stack',
-      about: 'About',
-      contact: 'Contact',
+    fr: { work: 'Projets', about: 'À propos', stack: 'Stack', contact: 'Contact', cv: 'Télécharger CV' },
+    en: { work: 'Work', about: 'About', stack: 'Stack', contact: 'Contact', cv: 'Download CV' },
+  },
+
+  hero: {
+    variants: {
+      conservative: {
+        fr: { kicker: 'Tom Bouchard · Architecte Solutions IA', head: 'CODELYTHE', sub: 'Développeur full-stack, orienté IA et agentique depuis 2023. Étudiant Epitech, stage chez Rizblanc.', workCta: 'Voir mes projets', cvCta: 'Télécharger CV' },
+        en: { kicker: 'Tom Bouchard · AI Solutions Architect', head: 'CODELYTHE', sub: 'Full-stack developer, focused on AI and agentic systems since 2023. Epitech student, intern at Rizblanc.', workCta: 'See my work', cvCta: 'Download CV' },
+      },
+      bold: {
+        fr: { kicker: 'Tom Bouchard · codelythe', head: 'Je construis des\nproduits IA qui tournent.', sub: 'De Aigent Hub en 2023 à Factories et mon poste d\'Architecte Solutions IA — je livre, je mesure, je recommence.', workCta: 'Voir mes projets', cvCta: 'Télécharger CV' },
+        en: { kicker: 'Tom Bouchard · codelythe', head: 'I build AI products\nthat ship.', sub: 'From Aigent Hub in 2023 to Factories and my AI Solutions Architect role — I ship, I measure, I iterate.', workCta: 'See my work', cvCta: 'Download CV' },
+      },
+      experimental: {
+        fr: { kicker: 'Tom Bouchard', head: 'Agentique\ndepuis 2023.', sub: 'Aigent Hub à l\'aube du code agentique · Factories en auto-pilote · Architecte Solutions IA chez Rizblanc. Le même fil directeur depuis le début.', workCta: 'Voir mes projets', cvCta: 'Télécharger CV' },
+        en: { kicker: 'Tom Bouchard', head: 'Agentic\nsince 2023.', sub: 'Aigent Hub at the dawn of agentic code · Factories on auto-pilot · AI Solutions Architect at Rizblanc. Same through-line since day one.', workCta: 'See my work', cvCta: 'Download CV' },
+      },
     },
   },
 
-  intro: {
-    fr: {
-      subtitle: 'développeur . étudiant . builder',
-    },
-    en: {
-      subtitle: 'developer . student . builder',
-    },
+  credibility: {
+    fr: { eyebrow: 'Preuves', items: [
+      { number: 'Depuis 2023', label: 'focus IA / agentique', firm: 'Aigent Hub' },
+      { number: '450+', label: 'utilisateurs actifs', firm: 'Judata' },
+      { number: '1er', label: 'prix GenAI Hackathon', firm: 'Epitech' },
+      { number: 'Architecte IA', label: 'stage en cours', firm: 'Rizlblanc' },
+      { number: 'Production', label: 'agents déployés', firm: 'Factories' },
+    ]},
+    en: { eyebrow: 'Track record', items: [
+      { number: 'Since 2023', label: 'AI / agentic focus', firm: 'Aigent Hub' },
+      { number: '450+', label: 'active users', firm: 'Judata' },
+      { number: '1st', label: 'GenAI Hackathon', firm: 'Epitech' },
+      { number: 'AI Architect', label: 'current internship', firm: 'Rizlblanc' },
+      { number: 'Production', label: 'agents shipped', firm: 'Factories' },
+    ]},
   },
 
-  work: {
-    fr: {
-      heading: 'Projets',
-      subheading: 'Ce que j\'ai construit, pour des clients et pour le plaisir.',
-      tabClient: 'Travaux Client',
-      tabSide: 'Projets Perso',
-    },
-    en: {
-      heading: 'Work',
-      subheading: 'What I\'ve built, for clients and for fun.',
-      tabClient: 'Client Work',
-      tabSide: 'Side Projects',
-    },
+  featured: {
+    fr: { eyebrow: 'Sélection', head: 'Projets', sub: 'Trois projets qui définissent ma direction.' },
+    en: { eyebrow: 'Selected work', head: 'Work', sub: 'Three projects that define where I\'m headed.' },
+    items: [
+      {
+        id: 'factories', image: '/images/factories.png',
+        tag: { fr: 'SaaS IA', en: 'AI SaaS' },
+        title: 'Factories',
+        tagline: {
+          fr: 'Plateforme d\'articles SEO générés et publiés en auto-pilote.',
+          en: 'Auto-pilot SEO article generation and publishing, at scale.',
+        },
+        blurb: {
+          fr: 'Plateforme de génération et publication automatique d\'articles SEO via IA. Auto-pilote, intégration WordPress multi-sites, scoring qualité, planification intelligente.',
+          en: 'AI-powered platform for automated SEO article generation and publishing. Auto-pilot mode, multi-site WordPress integration, quality scoring and smart scheduling.',
+        },
+        stack: ['Next.js', 'Fastify', 'Supabase', 'OpenAI', 'Claude'],
+        metric: { value: '24/7', label: { fr: 'mode auto-pilote', en: 'auto-pilot mode' } },
+        link: null, github: null,
+      },
+      {
+        id: 'judata', image: '/images/Judata.png', imageSquare: true,
+        tag: { fr: 'Mobile · Web', en: 'Mobile · Web' },
+        title: 'Judata',
+        tagline: {
+          fr: 'Le carnet de bord des judokas. iOS, Android, Web.',
+          en: 'The judoka\'s logbook. iOS, Android, Web.',
+        },
+        blurb: {
+          fr: 'Suivi de combats, statistiques, historique par adversaire, badges de progression. Déployé sur les trois plateformes.',
+          en: 'Fight tracking, statistics, per-opponent history, progression badges. Live on all three platforms.',
+        },
+        stack: ['React Native', 'Expo', 'Node.js', 'PostgreSQL'],
+        metric: { value: '450+', label: { fr: 'utilisateurs actifs', en: 'active users' } },
+        link: 'https://beacons.ai/zath.p', github: null,
+      },
+      {
+        id: 'aigent-hub', image: '/images/aigenthub.png',
+        tag: { fr: 'Plateforme IA · origine 2023', en: 'AI Platform · 2023 origin' },
+        title: 'Aigent Hub',
+        tagline: {
+          fr: 'Mon premier vrai projet perso — une plateforme d\'agents IA, imaginée à l\'aube du code agentique.',
+          en: 'My first real personal project — an AI-agent platform, conceived at the dawn of agentic coding.',
+        },
+        blurb: {
+          fr: 'Pensée en 2023, quand les agents LLM commençaient à peine à émerger. Aigent Hub a posé la base de ce que je construis aujourd\'hui : orchestration d\'agents, workflows automatisés, produits IA utilisables.',
+          en: 'Conceived in 2023, when LLM agents were barely emerging. Aigent Hub set the foundation for what I build today: agent orchestration, automated workflows, usable AI products.',
+        },
+        stack: ['React', 'Node.js', 'OpenAI', 'Agents'],
+        metric: { value: '2023', label: { fr: 'origine agentique', en: 'agentic origin' } },
+        link: 'https://www.aigent-hub.com/', github: null,
+      },
+    ],
   },
 
-  journey: {
-    fr: {
-      heading: 'Parcours',
-      subheading: 'Le chemin jusqu\'ici.',
-    },
-    en: {
-      heading: 'Journey',
-      subheading: 'The road so far.',
-    },
-  },
-
-  stack: {
-    fr: {
-      heading: 'Stack',
-      subheading: 'Les technologies avec lesquelles je travaille au quotidien.',
-    },
-    en: {
-      heading: 'Stack',
-      subheading: 'The technologies I work with daily.',
-    },
+  more: {
+    fr: { eyebrow: 'Plus', head: 'Autres projets', sub: 'Side-projects, missions freelance, outils.' },
+    en: { eyebrow: 'More', head: 'More projects', sub: 'Side-projects, freelance missions, tools.' },
+    items: [
+      { id: 'royal-canin', title: 'Royal Canin', img: '/images/royal-canin.png', url: null,
+        type: { fr: 'Entreprise · via Told', en: 'Enterprise · via Told' }, stack: ['React', 'TypeScript', 'REST'] },
+      { id: 'pinkcc', title: 'PINKCC Challenge', img: null, customVisual: 'pinkcc', url: null,
+        type: { fr: 'IA médicale · finaliste', en: 'Medical AI · finalist' }, stack: ['PyTorch', 'UNet 3D'] },
+      { id: 'quizgen', title: 'QuizGen IA', img: '/images/quizgen.png', url: 'https://genaihackaton.pages.dev/',
+        type: { fr: 'Outil éducatif · 1er prix', en: 'Educational tool · 1st place' }, stack: ['React', 'Node', 'OpenAI'] },
+      { id: 'bouger', title: 'Bouge&Apprends', img: '/images/B&A.png', url: 'https://www.bouge-et-apprends.com/',
+        type: { fr: 'App éducative · via Devify', en: 'Educational app · via Devify' }, stack: ['Vue', 'Nuxt', 'Fastify'] },
+      { id: 'edgeniche', title: 'EdgeNiche', img: '/images/edgeniche.png', url: 'https://edgeniche.com/',
+        type: { fr: 'Landing SEO', en: 'SEO landing' }, stack: ['React', 'Tailwind', 'Framer'] },
+      { id: 'jeb', title: 'JEB Incubator', img: '/images/JebIncubator.png', url: null,
+        type: { fr: 'Plateforme · 2 semaines', en: 'Platform · 2 weeks' }, stack: ['Next.js', 'Express', 'Postgres'] },
+    ],
   },
 
   about: {
     fr: {
-      heading: 'À propos',
-      subheading: 'Qui est derrière le code.',
+      eyebrow: 'À propos',
+      head: 'La personne\nderrière le code.',
       bio: [
-        'Je suis Tom, développeur web full-stack, étudiant à Epitech Montpellier et dirigeant de Codelythe, mon auto-entreprise. Originaire de Perpignan, je construis des choses pour le web depuis que j\'ai découvert que le code peut donner vie à des idées. Et ça ne s\'est jamais arrêté.',
-        'Ce qui me motive, c\'est de résoudre de vrais problèmes avec du code propre. Que ce soit une plateforme d\'IA pour gérer des agents, un outil éducatif qui génère des quiz, ou un site client qui convertit, j\'aime tout le processus, du premier wireframe au déploiement. J\'ai eu la chance de faire mes armes en entreprise avec un stage de 6 mois chez Elloha et un stage à temps partiel de 5 mois chez Hitopic.',
-        'En dehors du code, je suis curieux de tout ce qui touche à l\'IA, j\'aime partager ce que j\'apprends, et je cherche constamment à m\'améliorer. Je suis actuellement à la recherche d\'un stage de 5 mois pour mettre mes compétences en pratique dans un environnement professionnel.',
+        'Je suis Tom — développeur full-stack, étudiant en 3ème année à Epitech Montpellier, fondateur de Codelythe, actuellement Architecte Solutions IA chez Rizblanc.',
+        'Je travaille sur des produits IA depuis 2023, quand Aigent Hub était mon premier vrai projet perso — à l\'aube du code agentique. Cette ligne ne s\'est jamais arrêtée : Factories aujourd\'hui, l\'orchestration d\'agents chez Rizblanc, et mes missions freelance pour Royal Canin, Elloha, Hitopic.',
+        'Ce qui m\'intéresse : transformer des prompts en produits utilisables. Agents, automatisation, IA appliquée. Pas l\'IA comme démo — l\'IA comme outil qui tourne.',
       ],
+      stats: [
+        { v: 'Depuis 2023', k: 'focus IA / agentique' },
+        { v: 'Architecte IA', k: 'Rizblanc · en cours' },
+        { v: '3e année', k: 'Epitech Montpellier' },
+      ],
+      cvCta: 'Télécharger le CV',
     },
     en: {
-      heading: 'About',
-      subheading: 'The person behind the code.',
+      eyebrow: 'About',
+      head: 'The person\nbehind the code.',
       bio: [
-        'I\'m Tom, a full-stack web developer, student at Epitech Montpellier and founder of Codelythe, my freelance business. Originally from Perpignan, I\'ve been building things for the web since I discovered that code can bring ideas to life. And I haven\'t stopped since.',
-        'What drives me is solving real problems with clean code. Whether it\'s an AI platform to manage agents, an educational tool that generates quizzes, or a client site that converts, I love the entire process from first wireframe to deployment. I\'ve had the chance to sharpen my skills with a 6-month internship at Elloha and a 5-month part-time internship at Hitopic.',
-        'Outside of code, I\'m curious about everything AI, I enjoy sharing what I learn, and I\'m constantly pushing to improve. I\'m currently looking for a 5-month internship to put my skills to work in a professional environment.',
+        'I\'m Tom — full-stack developer, 3rd-year Epitech Montpellier student, founder of Codelythe, currently AI Solutions Architect at Rizblanc.',
+        'I\'ve been shipping AI products since 2023, when Aigent Hub was my first real personal project — at the dawn of agentic code. That line never stopped: Factories today, agent orchestration at Rizblanc, and freelance missions for Royal Canin, Elloha, Hitopic.',
+        'What I care about: turning prompts into usable products. Agents, automation, applied AI. Not AI as a demo — AI as a tool that actually ships.',
       ],
+      stats: [
+        { v: 'Since 2023', k: 'AI / agentic focus' },
+        { v: 'AI Architect', k: 'Rizblanc · current' },
+        { v: 'Year 3', k: 'Epitech Montpellier' },
+      ],
+      cvCta: 'Download CV',
     },
   },
 
-  internship: {
-    fr: {
-      heading: 'Stage',
-      subheading: 'Prêt à rejoindre votre équipe.',
-      badge: 'Disponible maintenant',
-      title: 'Disponible pour un stage de 5 mois',
-      period: 'Mars / Juillet 2026',
-      description: 'À la recherche d\'une expérience en entreprise où je peux contribuer, apprendre et grandir en tant que développeur.',
-      bullets: [
-        'Maîtrise de Next.js, Fastify, TypeScript, Supabase et de l\'écosystème web moderne',
-        'Expérience avec les APIs IA (OpenAI, Anthropic, Grok, Perplexity) et les outils d\'automatisation',
-        'Habitué à travailler de manière autonome et à livrer des résultats concrets',
-        'Apprentissage rapide, curieux et motivé par les défis techniques',
-      ],
-      cta: 'Me contacter',
-    },
-    en: {
-      heading: 'Internship',
-      subheading: 'Ready to join your team.',
-      badge: 'Available now',
-      title: 'Available for a 5-month internship',
-      period: 'March / July 2026',
-      description: 'Looking for a company where I can contribute, learn, and grow as a developer.',
-      bullets: [
-        'Proficient in Next.js, Fastify, TypeScript, Supabase, and the modern web ecosystem',
-        'Experience with AI APIs (OpenAI, Anthropic, Grok, Perplexity) and automation tools',
-        'Comfortable working autonomously and delivering real results',
-        'Fast learner, curious, and driven by technical challenges',
-      ],
-      cta: 'Get in touch',
-    },
+  stack: {
+    fr: { eyebrow: 'Stack', head: 'Avec quoi je construis.', sub: 'L\'outillage que j\'utilise au quotidien.' },
+    en: { eyebrow: 'Stack', head: 'What I build with.', sub: 'The tools I reach for on the daily.' },
+    groups: [
+      { key: 'frontend', label: { fr: 'Frontend', en: 'Frontend' },
+        items: [
+          { n: 'React', ic: 'react' },
+          { n: 'Next.js', ic: 'nextjs' },
+          { n: 'Vue · Nuxt', ic: 'vue' },
+          { n: 'TypeScript', ic: 'ts' },
+          { n: 'Tailwind', ic: 'tailwind' },
+          { n: 'shadcn/ui', ic: 'shadcn' },
+          { n: 'Framer Motion', ic: 'framer' },
+        ]},
+      { key: 'backend', label: { fr: 'Backend', en: 'Backend' },
+        items: [
+          { n: 'Node.js', ic: 'node' },
+          { n: 'Fastify', ic: 'fastify' },
+          { n: 'Express', ic: 'express' },
+          { n: 'REST', ic: 'rest' },
+          { n: 'PostgreSQL', ic: 'postgres' },
+          { n: 'Prisma', ic: 'prisma' },
+          { n: 'Supabase', ic: 'supabase' },
+        ]},
+      { key: 'mobile', label: { fr: 'Mobile', en: 'Mobile' },
+        items: [
+          { n: 'React Native', ic: 'react' },
+          { n: 'Expo', ic: 'expo' },
+          { n: 'RN Reusables', ic: 'rn' },
+        ]},
+      { key: 'ai', label: { fr: 'IA', en: 'AI' },
+        items: [
+          { n: 'OpenAI', ic: 'openai' },
+          { n: 'Anthropic', ic: 'anthropic' },
+          { n: 'Claude Code', ic: 'claudecode' },
+          { n: 'Agents', ic: 'agent' },
+          { n: 'RAG', ic: 'rag' },
+          { n: 'Perplexity', ic: 'perplexity' },
+          { n: 'PyTorch', ic: 'pytorch' },
+        ]},
+      { key: 'tools', label: { fr: 'Outils', en: 'Tools' },
+        items: [
+          { n: 'Git', ic: 'git' },
+          { n: 'Docker', ic: 'docker' },
+          { n: 'Vite', ic: 'vite' },
+          { n: 'Vercel', ic: 'vercel' },
+          { n: 'Railway', ic: 'railway' },
+          { n: 'Figma', ic: 'figma' },
+        ]},
+    ],
+  },
+
+  journey: {
+    fr: { heading: 'Parcours', subheading: 'Le chemin jusqu\'ici.' },
+    en: { heading: 'Journey', subheading: 'The road so far.' },
+  },
+
+  footerCta: {
+    fr: { head: 'On en discute ?', sub: 'Réponse sous 24h.', cta: 'Me contacter' },
+    en: { head: 'Let\'s talk.', sub: 'Reply within 24 hours.', cta: 'Get in touch' },
   },
 
   contact: {
     fr: {
-      heading: 'Contact',
-      subheading: 'Envie de discuter ? Écrivez-moi.',
-      nameLabel: 'Nom',
-      namePlaceholder: 'Votre nom',
-      emailLabel: 'Email',
-      emailPlaceholder: 'votre@email.com',
-      messageLabel: 'Message',
-      messagePlaceholder: 'Votre message...',
-      send: 'Envoyer',
-      sending: 'Envoi...',
-      success: 'Message envoyé avec succès !',
-      error: 'Erreur lors de l\'envoi. Réessayez.',
-      or: 'Ou retrouvez-moi sur',
+      head: 'Contact', sub: 'Dites-moi ce sur quoi vous travaillez.',
+      nameL: 'Nom', nameP: 'Votre nom',
+      emailL: 'Email', emailP: 'vous@entreprise.com',
+      msgL: 'Message', msgP: 'Dites-moi ce sur quoi vous travaillez…',
+      send: 'Envoyer', sending: 'Envoi…', sent: 'Message envoyé.',
+      or: 'Ou trouvez-moi ici', close: 'Fermer',
     },
     en: {
-      heading: 'Contact',
-      subheading: 'Want to chat? Drop me a line.',
-      nameLabel: 'Name',
-      namePlaceholder: 'Your name',
-      emailLabel: 'Email',
-      emailPlaceholder: 'your@email.com',
-      messageLabel: 'Message',
-      messagePlaceholder: 'Your message...',
-      send: 'Send',
-      sending: 'Sending...',
-      success: 'Message sent successfully!',
-      error: 'Failed to send. Please try again.',
-      or: 'Or find me on',
+      head: 'Contact', sub: 'Tell me what you\'re working on.',
+      nameL: 'Name', nameP: 'Your name',
+      emailL: 'Email', emailP: 'you@company.com',
+      msgL: 'Message', msgP: 'Tell me what you\'re working on…',
+      send: 'Send', sending: 'Sending…', sent: 'Message sent.',
+      or: 'Or find me here', close: 'Close',
     },
   },
+
+  socials: [
+    { id: 'email', label: 'codelythe@gmail.com', href: 'mailto:codelythe@gmail.com' },
+    { id: 'linkedin', label: 'linkedin.com/in/tom-bouchard', href: 'https://www.linkedin.com/in/tom-bouchard-881b212b2' },
+    { id: 'github', label: 'github.com/dobronx06', href: 'https://github.com/dobronx06' },
+  ],
 
   footer: {
-    fr: {
-      rights: 'Tous droits réservés.',
-    },
-    en: {
-      rights: 'All rights reserved.',
-    },
+    fr: { rights: 'Tous droits réservés.' },
+    en: { rights: 'All rights reserved.' },
   },
-}
-
-export const projects = {
-  client: [
-    {
-      id: 'edgeniche',
-      title: 'EdgeNiche',
-      type: { fr: 'Landing Page', en: 'Landing Page' },
-      role: { fr: 'Développeur & Designer', en: 'Developer & Designer' },
-      description: {
-        fr: 'One-page pour une entreprise de SEO. Design moderne, optimisé pour la conversion avec animations fluides et CTA stratégiques.',
-        en: 'One-page site for an SEO company. Modern design, optimized for conversion with smooth animations and strategic CTAs.',
-      },
-      tech: ['React', 'Tailwind CSS', 'Framer Motion'],
-      image: '/images/edgeniche.png',
-      url: 'https://edgeniche.com/',
-    },
-    {
-      id: 'judata',
-      title: 'Judata',
-      type: { fr: 'Application Mobile & Web', en: 'Mobile & Web App' },
-      role: { fr: 'Développeur Full-Stack', en: 'Full-Stack Developer' },
-      description: {
-        fr: 'Carnet de bord digital pour judokas, disponible sur iOS, Android et Web. Suivi des combats, statistiques, historique par adversaire et badges de progression. 125+ utilisateurs.',
-        en: 'Digital logbook for judokas, available on iOS, Android and Web. Fight tracking, statistics, per-opponent history and progression badges. 125+ users.',
-      },
-      tech: ['React', 'Node.js', 'PostgreSQL', 'REST API'],
-      image: '/images/Judata.png',
-      imageSquare: true,
-      url: 'https://beacons.ai/zath.p',
-      metric: '125+',
-      metricLabel: { fr: 'utilisateurs', en: 'users' },
-    },
-    {
-      id: 'royal-canin',
-      title: 'Royal Canin',
-      type: { fr: 'Projet Entreprise', en: 'Enterprise Project' },
-      role: { fr: 'Développeur Frontend (via Told)', en: 'Frontend Developer (via Told)' },
-      description: {
-        fr: 'Mission frontend de 2 mois : développement du backoffice d\'une application de recommandation alimentaire pour chats et chiens.',
-        en: '2-month frontend mission: built the back-office for a pet food recommendation app for cats and dogs.',
-      },
-      tech: ['React', 'TypeScript'],
-      image: '/images/royal-canin.png',
-      url: null,
-    },
-    {
-      id: 'bouger-apprendre',
-      title: 'Bouge&Apprends',
-      type: { fr: 'Application Éducative', en: 'Educational App' },
-      role: { fr: 'Développeur (via Devify)', en: 'Developer (via Devify)' },
-      description: {
-        fr: 'Mission full-stack d\'un mois : développement d\'une application éducative combinant activité physique et apprentissage, via l\'agence Devify.',
-        en: '1-month full-stack mission: development of an educational app combining physical activity and learning, via Devify agency.',
-      },
-      tech: ['Vue.js', 'Nuxt', 'NuxtUI', 'Fastify'],
-      image: '/images/B&A.png',
-      url: 'https://www.bouge-et-apprends.com/',
-    },
-  ],
-  side: [
-    {
-      id: 'factories',
-      title: 'Factories',
-      type: { fr: 'Plateforme SaaS', en: 'SaaS Platform' },
-      role: { fr: 'Créateur & Développeur', en: 'Creator & Developer' },
-      description: {
-        fr: 'Plateforme de génération et publication automatique d\'articles SEO via IA. Auto-pilote, intégration WordPress multi-sites, scoring qualité et planification intelligente.',
-        en: 'AI-powered platform for automated SEO article generation and publishing. Auto-pilot mode, multi-site WordPress integration, quality scoring and smart scheduling.',
-      },
-      tech: ['Next.js', 'Supabase', 'Fastify', 'OpenAI'],
-      image: '/images/factories.png',
-      url: null,
-    },
-    {
-      id: 'aigent-hub',
-      title: 'Aigent Hub',
-      type: { fr: 'Plateforme IA', en: 'AI Platform' },
-      role: { fr: 'Créateur & Développeur', en: 'Creator & Developer' },
-      description: {
-        fr: 'Plateforme centralisée pour créer, déployer et gérer des agents IA personnalisés. Interface intuitive avec analyse de performances.',
-        en: 'Centralized platform for creating, deploying and managing custom AI agents. Intuitive interface with performance analytics.',
-      },
-      tech: ['React', 'Node.js', 'OpenAI', 'Supabase'],
-      image: '/images/aigenthub.png',
-      url: 'https://www.aigent-hub.com/',
-    },
-    {
-      id: 'quizgen',
-      title: 'QuizGen IA',
-      type: { fr: 'Outil Éducatif', en: 'Educational Tool' },
-      role: { fr: 'Créateur & Développeur', en: 'Creator & Developer' },
-      description: {
-        fr: 'Générateur de quiz multijoueur par IA à partir de PDF de cours. Projet vainqueur du hackathon GenAI Epitech.',
-        en: 'AI-powered multiplayer quiz generator from course PDFs. Winner of the Epitech GenAI hackathon.',
-      },
-      tech: ['React', 'Tailwind CSS', 'Node.js', 'OpenAI API'],
-      image: '/images/quizgen.png',
-      url: 'https://genaihackaton.pages.dev/',
-    },
-    {
-      id: 'jeb-incubator',
-      title: 'JEB Incubator',
-      type: { fr: 'Plateforme Web', en: 'Web Platform' },
-      role: { fr: 'Créateur & Développeur', en: 'Creator & Developer' },
-      description: {
-        fr: 'Plateforme de mise en relation entre startups et investisseurs avec dashboard, messagerie intégrée et export PDF. Réalisé en 2 semaines.',
-        en: 'Platform connecting startups and investors with dashboard, built-in messaging and PDF export. Built in 2 weeks.',
-      },
-      tech: ['Next.js', 'Express', 'PostgreSQL', 'Socket.io'],
-      image: '/images/JebIncubator.png',
-      url: null,
-    },
-    {
-      id: 'series-watcher',
-      title: 'Series Watcher',
-      type: { fr: 'Réseau Social', en: 'Social Network' },
-      role: { fr: 'Créateur & Développeur', en: 'Creator & Developer' },
-      description: {
-        fr: 'Réseau social pour noter et discuter des séries TV entre amis avec recommandations personnalisées.',
-        en: 'Social network to rate and discuss TV shows with friends, featuring personalized recommendations.',
-      },
-      tech: ['React', 'Node.js', 'REST API', 'PostgreSQL'],
-      image: '/images/seriesTracker.png',
-      url: 'https://mangawatcher.pages.dev/',
-    },
-  ],
 }
 
 export const timeline = [
@@ -299,11 +251,11 @@ export const timeline = [
         },
       },
       {
-        type: 'milestone',
-        title: { fr: 'Recherche de stage', en: 'Internship search' },
+        type: 'work',
+        title: { fr: 'Architecte Solutions IA chez Rizblanc', en: 'AI Solutions Architect at Rizblanc' },
         description: {
-          fr: 'À la recherche d\'un stage de 5 mois (mars–juillet 2026) en développement web / IA.',
-          en: 'Looking for a 5-month internship (March–July 2026) in web development / AI.',
+          fr: 'Stage en tant qu\'Architecte Solutions IA — orchestration d\'agents, workflows automatisés.',
+          en: 'Internship as AI Solutions Architect — agent orchestration, automated workflows.',
         },
         pulse: true,
       },
@@ -324,8 +276,8 @@ export const timeline = [
         type: 'work',
         title: { fr: 'Judata, Développeur Full-Stack', en: 'Judata, Full-Stack Developer' },
         description: {
-          fr: 'Application de suivi de combats pour judokas. 125+ utilisateurs actifs.',
-          en: 'Fight tracking app for judokas. 125+ active users.',
+          fr: 'Application de suivi de combats pour judokas. 450+ utilisateurs actifs.',
+          en: 'Fight tracking app for judokas. 450+ active users.',
         },
       },
       {
@@ -437,26 +389,3 @@ export const timeline = [
     ],
   },
 ]
-
-export const techStack = {
-  frontend: {
-    label: 'Frontend',
-    items: ['React', 'Next.js', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion'],
-  },
-  backend: {
-    label: 'Backend',
-    items: ['Node.js', 'Express', 'Fastify', 'REST APIs', 'PostgreSQL', 'Prisma ORM', 'Supabase'],
-  },
-  mobile: {
-    label: 'Mobile',
-    items: ['React Native', 'Expo', 'ReactNativeReusables'],
-  },
-  ai: {
-    label: 'AI / ML',
-    items: ['OpenAI API', 'Anthropic API', 'Grok API', 'Perplexity API', 'Hugging Face', 'RAG', 'MONAI'],
-  },
-  tools: {
-    label: 'Tools',
-    items: ['Git', 'Docker', 'Railway', 'Vercel', 'Vite', 'Swagger'],
-  },
-}

@@ -7,14 +7,27 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-[#2e5a3f] bg-[#1a3a2a] py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
-        <span className="font-display text-sm font-semibold tracking-tight text-[#6b7a64]">
+    <footer className="bg-[var(--bg-forest)] py-12">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-6 px-8 flex-wrap">
+        <span className="font-display text-[18px] font-bold tracking-[-0.02em] text-[#f5f1ea]">
           CODELYTHE
         </span>
-        <span className="text-xs text-[#6b7a64]">
+        <span className="text-xs text-[#a8b5a0]">
           &copy; {year} Tom Bouchard. {t.rights}
         </span>
+        <div className="flex gap-4 text-[13px]">
+          {content.socials.map((s) => (
+            <a
+              key={s.id}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#a8b5a0] transition-colors hover:text-[var(--accent-light)]"
+            >
+              {s.label.split('/').pop() || s.label}
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   )
