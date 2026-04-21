@@ -175,7 +175,7 @@ export default function Intro({ onContact }) {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(60px,12vw,160px)] font-bold leading-[0.94] tracking-[-0.04em] text-[var(--ink-strong)]"
+          className="font-display text-[clamp(48px,10vw,140px)] font-bold leading-[0.94] tracking-[-0.04em] text-[var(--ink-strong)] w-full"
           style={{ textShadow: '0 0 30px rgba(240,235,227,0.9), 0 0 60px rgba(240,235,227,0.5)', whiteSpace: 'pre-line' }}
         >
           {heroData.head}
