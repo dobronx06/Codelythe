@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-display: 'Panchang', system-ui, sans-serif;
+  --font-sans: 'Nohemi', 'Inter', system-ui, sans-serif;
+}
+
 /* ─── Fonts ─── */
 @font-face {
   font-family: 'Panchang';
