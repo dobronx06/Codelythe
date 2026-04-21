@@ -19,7 +19,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden border border-[var(--border-warm)] bg-[var(--bg-creme-deep)]">
               <img
-                src="/images/codelythe-logo.png"
+                src="/images/1766693087603.jpeg"
                 alt="Tom Bouchard"
                 className="w-full h-full object-cover"
               />

@@ -157,7 +157,7 @@ export default function Intro({ onContact }) {
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-[var(--bg-creme)]" style={{ padding: '140px 32px 80px' }}>
       <canvas ref={canvasRef} className="pointer-events-none absolute inset-0" />
 
-      <div className="relative z-10 text-left max-w-5xl mx-auto">
+      <div className="relative z-10 text-center w-full mx-auto">
         {/* Kicker pill */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -175,7 +175,7 @@ export default function Intro({ onContact }) {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-[clamp(48px,10vw,140px)] font-bold leading-[0.94] tracking-[-0.04em] text-[var(--ink-strong)]"
+          className="font-display text-[clamp(36px,8vw,140px)] font-bold leading-[0.94] tracking-[-0.03em] text-[var(--ink-strong)] -mx-4 sm:mx-0"
           style={{ textShadow: '0 0 30px rgba(240,235,227,0.9), 0 0 60px rgba(240,235,227,0.5)', whiteSpace: 'pre-line' }}
         >
           {heroData.head}
@@ -186,7 +186,7 @@ export default function Intro({ onContact }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-7 mx-auto max-w-[58ch] text-[18px] leading-[1.55] text-[var(--ink-dim)]"
+          className="mt-7 mx-auto max-w-[58ch] text-[18px] leading-[1.55] text-[var(--ink-strong)]"
           style={{ textShadow: '0 0 20px rgba(240,235,227,0.8)' }}
         >
           {heroData.sub}
@@ -215,7 +215,7 @@ export default function Intro({ onContact }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.9 }}
-          className="mt-14 inline-flex items-center gap-5 text-xs text-[var(--ink-dim)]"
+          className="mt-14 flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs text-[var(--ink-strong)]"
         >
           {content.socials.map((s) => (
             <a

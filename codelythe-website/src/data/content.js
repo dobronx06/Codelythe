@@ -11,8 +11,8 @@ export const content = {
         en: { kicker: 'Tom Bouchard · AI Solutions Architect', head: 'CODELYTHE', sub: 'Full-stack developer, focused on AI and agentic systems since 2023. Epitech student, intern at Rizblanc.', workCta: 'See my work', cvCta: 'Download CV' },
       },
       bold: {
-        fr: { kicker: 'Tom Bouchard · codelythe', head: 'Je construis des\nproduits IA qui tournent.', sub: 'De Aigent Hub en 2023 à Factories et mon poste d\'Architecte Solutions IA — je livre, je mesure, je recommence.', workCta: 'Voir mes projets', cvCta: 'Télécharger CV' },
-        en: { kicker: 'Tom Bouchard · codelythe', head: 'I build AI products\nthat ship.', sub: 'From Aigent Hub in 2023 to Factories and my AI Solutions Architect role — I ship, I measure, I iterate.', workCta: 'See my work', cvCta: 'Download CV' },
+        fr: { kicker: 'Tom Bouchard · codelythe', head: 'Je construis des\nproduits IA qui tournent.', sub: 'De Aigent Hub en 2023 à Factories et mon poste d\'Architecte Solutions IA , je livre, je mesure, je recommence.', workCta: 'Voir mes projets', cvCta: 'Télécharger CV' },
+        en: { kicker: 'Tom Bouchard · codelythe', head: 'I build AI products\nthat ship.', sub: 'From Aigent Hub in 2023 to Factories and my AI Solutions Architect role , I ship, I measure, I iterate.', workCta: 'See my work', cvCta: 'Download CV' },
       },
       experimental: {
         fr: { kicker: 'Tom Bouchard', head: 'Agentique\ndepuis 2023.', sub: 'Aigent Hub à l\'aube du code agentique · Factories en auto-pilote · Architecte Solutions IA chez Rizblanc. Le même fil directeur depuis le début.', workCta: 'Voir mes projets', cvCta: 'Télécharger CV' },
@@ -79,8 +79,8 @@ export const content = {
         tag: { fr: 'Plateforme IA · origine 2023', en: 'AI Platform · 2023 origin' },
         title: 'Aigent Hub',
         tagline: {
-          fr: 'Mon premier vrai projet perso — une plateforme d\'agents IA, imaginée à l\'aube du code agentique.',
-          en: 'My first real personal project — an AI-agent platform, conceived at the dawn of agentic coding.',
+          fr: 'Mon premier vrai projet perso , une plateforme d\'agents IA, imaginée à l\'aube du code agentique.',
+          en: 'My first real personal project , an AI-agent platform, conceived at the dawn of agentic coding.',
         },
         blurb: {
           fr: 'Pensée en 2023, quand les agents LLM commençaient à peine à émerger. Aigent Hub a posé la base de ce que je construis aujourd\'hui : orchestration d\'agents, workflows automatisés, produits IA utilisables.',
@@ -117,9 +117,9 @@ export const content = {
       eyebrow: 'À propos',
       head: 'La personne\nderrière le code.',
       bio: [
-        'Je suis Tom — développeur full-stack, étudiant en 3ème année à Epitech Montpellier, fondateur de Codelythe, actuellement Architecte Solutions IA chez Rizblanc.',
-        'Je travaille sur des produits IA depuis 2023, quand Aigent Hub était mon premier vrai projet perso — à l\'aube du code agentique. Cette ligne ne s\'est jamais arrêtée : Factories aujourd\'hui, l\'orchestration d\'agents chez Rizblanc, et mes missions freelance pour Royal Canin, Elloha, Hitopic.',
-        'Ce qui m\'intéresse : transformer des prompts en produits utilisables. Agents, automatisation, IA appliquée. Pas l\'IA comme démo — l\'IA comme outil qui tourne.',
+        'Je suis Tom , développeur full-stack, étudiant en 3ème année à Epitech Montpellier, fondateur de Codelythe, actuellement Architecte Solutions IA chez Rizblanc.',
+        'Je travaille sur des produits IA depuis 2023, quand Aigent Hub était mon premier vrai projet perso , à l\'aube du code agentique. Cette ligne ne s\'est jamais arrêtée : Factories aujourd\'hui, l\'orchestration d\'agents chez Rizblanc, et mes missions freelance pour Royal Canin, Elloha, Hitopic.',
+        'Ce qui m\'intéresse : transformer des prompts en produits utilisables. Agents, automatisation, IA appliquée. Pas l\'IA comme démo , l\'IA comme outil qui tourne.',
       ],
       stats: [
         { v: 'Depuis 2023', k: 'focus IA / agentique' },
@@ -132,9 +132,9 @@ export const content = {
       eyebrow: 'About',
       head: 'The person\nbehind the code.',
       bio: [
-        'I\'m Tom — full-stack developer, 3rd-year Epitech Montpellier student, founder of Codelythe, currently AI Solutions Architect at Rizblanc.',
-        'I\'ve been shipping AI products since 2023, when Aigent Hub was my first real personal project — at the dawn of agentic code. That line never stopped: Factories today, agent orchestration at Rizblanc, and freelance missions for Royal Canin, Elloha, Hitopic.',
-        'What I care about: turning prompts into usable products. Agents, automation, applied AI. Not AI as a demo — AI as a tool that actually ships.',
+        'I\'m Tom , full-stack developer, 3rd-year Epitech Montpellier student, founder of Codelythe, currently AI Solutions Architect at Rizblanc.',
+        'I\'ve been shipping AI products since 2023, when Aigent Hub was my first real personal project , at the dawn of agentic code. That line never stopped: Factories today, agent orchestration at Rizblanc, and freelance missions for Royal Canin, Elloha, Hitopic.',
+        'What I care about: turning prompts into usable products. Agents, automation, applied AI. Not AI as a demo , AI as a tool that actually ships.',
       ],
       stats: [
         { v: 'Since 2023', k: 'AI / agentic focus' },
@@ -254,8 +254,8 @@ export const timeline = [
         type: 'work',
         title: { fr: 'Architecte Solutions IA chez Rizblanc', en: 'AI Solutions Architect at Rizblanc' },
         description: {
-          fr: 'Stage en tant qu\'Architecte Solutions IA — orchestration d\'agents, workflows automatisés.',
-          en: 'Internship as AI Solutions Architect — agent orchestration, automated workflows.',
+          fr: 'Stage en tant qu\'Architecte Solutions IA , orchestration d\'agents, workflows automatisés.',
+          en: 'Internship as AI Solutions Architect , agent orchestration, automated workflows.',
         },
         pulse: true,
       },
