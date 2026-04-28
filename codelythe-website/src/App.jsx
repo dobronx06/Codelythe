@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Intro from './components/sections/Intro'
@@ -10,8 +11,9 @@ import About from './components/sections/About'
 import Stack from './components/sections/Stack'
 import FooterCTA from './components/sections/FooterCTA'
 import ContactModal from './components/ui/ContactModal'
+import Offre from './pages/Offre'
 
-function App() {
+function Portfolio() {
   const [contactOpen, setContactOpen] = useState(false)
   const openModal = () => setContactOpen(true)
   const closeModal = () => setContactOpen(false)
@@ -32,6 +34,15 @@ function App() {
       <Footer />
       {contactOpen && <ContactModal onClose={closeModal} />}
     </>
+  )
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/offre" element={<Offre />} />
+    </Routes>
   )
 }
 

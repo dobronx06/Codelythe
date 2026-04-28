@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser'
 import { useLanguage } from '../../hooks/useLanguage'
 import { content } from '../../data/content'
 
-export default function ContactModal({ onClose }) {
+export default function ContactModal({ onClose, prefill }) {
   const { lang } = useLanguage()
   const t = content.contact[lang]
   const formRef = useRef(null)
@@ -81,6 +81,21 @@ export default function ContactModal({ onClose }) {
             />
           </div>
 
+          {prefill && (
+            <div className="mb-3.5">
+              <label className="block text-[11px] font-semibold tracking-[0.14em] uppercase text-[var(--ink-dim)] mb-1.5">
+                Nom de l'association
+              </label>
+              <input
+                type="text"
+                name="asso_name"
+                placeholder="Ex : BDE Centrale, Club Photo…"
+                required
+                className="w-full px-3.5 py-3 rounded-[10px] border border-[var(--border-warm)] bg-white text-sm text-[var(--ink-strong)] focus:outline-none focus:border-[var(--accent)] focus:ring-[3px] focus:ring-[rgba(16,185,129,0.15)] transition-all"
+              />
+            </div>
+          )}
+
           <div className="mb-3.5">
             <label className="block text-[11px] font-semibold tracking-[0.14em] uppercase text-[var(--ink-dim)] mb-1.5">
               {t.emailL}
@@ -101,6 +116,7 @@ export default function ContactModal({ onClose }) {
             <textarea
               name="message"
               placeholder={t.msgP}
+              defaultValue={prefill?.message || ''}
               required
               rows={5}
               className="w-full px-3.5 py-3 rounded-[10px] border border-[var(--border-warm)] bg-white text-sm text-[var(--ink-strong)] resize-none focus:outline-none focus:border-[var(--accent)] focus:ring-[3px] focus:ring-[rgba(16,185,129,0.15)] transition-all"
