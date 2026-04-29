@@ -99,7 +99,7 @@ export const content = {
     items: [
       { id: 'royal-canin', title: 'Royal Canin', img: '/images/royal-canin.png', url: null,
         type: { fr: 'Entreprise · via Told', en: 'Enterprise · via Told' }, stack: ['React', 'TypeScript', 'REST'] },
-      { id: 'pinkcc', title: 'PINKCC Challenge', img: null, customVisual: 'pinkcc', url: null,
+      { id: 'pinkcc', title: 'PINKCC Challenge', img: null, customVisual: 'pinkcc', url: 'https://github.com/dobronx06/PinkCC',
         type: { fr: 'IA médicale · finaliste', en: 'Medical AI · finalist' }, stack: ['PyTorch', 'UNet 3D'] },
       { id: 'quizgen', title: 'QuizGen IA', img: '/images/quizgen.png', url: 'https://genaihackaton.pages.dev/',
         type: { fr: 'Outil éducatif · 1er prix', en: 'Educational tool · 1st place' }, stack: ['React', 'Node', 'OpenAI'] },
