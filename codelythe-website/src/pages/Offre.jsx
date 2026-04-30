@@ -17,9 +17,8 @@ const plans = [
     features: [
       'Site one-page sur-mesure',
       'Design mobile-first',
-      'Formulaire de contact',
       'Optimisé SEO',
-      'Livraison en 2 semaines',
+      'Livraison en 2 jours',
     ],
   },
   {
@@ -177,7 +176,7 @@ export default function Offre() {
               className="text-[18px] md:text-[21px] max-w-[540px] mx-auto mb-12"
               style={{ color: 'rgba(245,241,234,0.6)' }}
             >
-              Un site qui vous ressemble. Livré en 2 semaines.
+              Un site qui vous ressemble. Livré en 2 jours.
             </motion.p>
 
             <motion.div
