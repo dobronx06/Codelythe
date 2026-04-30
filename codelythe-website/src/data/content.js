@@ -72,7 +72,7 @@ export const content = {
         },
         stack: ['React Native', 'Expo', 'Node.js', 'PostgreSQL'],
         metric: { value: '450+', label: { fr: 'utilisateurs actifs', en: 'active users' } },
-        link: 'https://beacons.ai/zath.p', github: null,
+        link: 'https://judata.app', github: null,
       },
       {
         id: 'aigent-hub', image: '/images/aigenthub.png',
