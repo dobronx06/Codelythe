@@ -24,14 +24,14 @@ export const content = {
   credibility: {
     fr: { eyebrow: 'Preuves', items: [
       { number: 'Depuis 2023', label: 'focus IA / agentique', firm: 'Aigent Hub' },
-      { number: '450+', label: 'utilisateurs actifs', firm: 'Judata' },
+      { number: '525+', label: 'utilisateurs actifs', firm: 'Judata' },
       { number: '1er', label: 'prix GenAI Hackathon', firm: 'Epitech' },
       { number: 'Architecte IA', label: 'stage en cours', firm: 'Rizlblanc' },
       { number: 'Production', label: 'agents déployés', firm: 'Factories' },
     ]},
     en: { eyebrow: 'Track record', items: [
       { number: 'Since 2023', label: 'AI / agentic focus', firm: 'Aigent Hub' },
-      { number: '450+', label: 'active users', firm: 'Judata' },
+      { number: '525+', label: 'active users', firm: 'Judata' },
       { number: '1st', label: 'GenAI Hackathon', firm: 'Epitech' },
       { number: 'AI Architect', label: 'current internship', firm: 'Rizlblanc' },
       { number: 'Production', label: 'agents shipped', firm: 'Factories' },
@@ -71,7 +71,7 @@ export const content = {
           en: 'Fight tracking, statistics, per-opponent history, progression badges. Live on all three platforms.',
         },
         stack: ['React Native', 'Expo', 'Node.js', 'PostgreSQL'],
-        metric: { value: '450+', label: { fr: 'utilisateurs actifs', en: 'active users' } },
+        metric: { value: '525+', label: { fr: 'utilisateurs actifs', en: 'active users' } },
         link: 'https://judata.app', github: null,
       },
       {
@@ -276,8 +276,8 @@ export const timeline = [
         type: 'work',
         title: { fr: 'Judata, Développeur Full-Stack', en: 'Judata, Full-Stack Developer' },
         description: {
-          fr: 'Application de suivi de combats pour judokas. 450+ utilisateurs actifs.',
-          en: 'Fight tracking app for judokas. 450+ active users.',
+          fr: 'Application de suivi de combats pour judokas. 525+ utilisateurs actifs.',
+          en: 'Fight tracking app for judokas. 525+ active users.',
         },
       },
       {
