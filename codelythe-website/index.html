@@ -1,31 +1,73 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Tom Bouchard, développeur full-stack, étudiant Epitech, fondateur Codelythe. Portfolio web et IA." />
+    <title>Tom Bouchard · Codelythe | Architecte mobile, apps & produits web</title>
+    <meta name="description" content="Tom Bouchard, architecte mobile chez Hitopic et fondateur de Codelythe. Créateur de Jutrack (900+ utilisateurs), Chollo, Spoily, Perfumdle et Mes Ferias." />
+    <link rel="canonical" href="https://codelythe.com/" />
+    <meta name="author" content="Tom Bouchard" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="CODELYTHE | Tom Bouchard" />
-    <meta property="og:description" content="Développeur full-stack, étudiant Epitech Montpellier, fondateur Codelythe. Portfolio web et IA." />
+    <meta property="og:site_name" content="Codelythe" />
+    <meta property="og:title" content="Tom Bouchard · Codelythe" />
+    <meta property="og:description" content="Architecte mobile et créateur de Jutrack, Chollo, Spoily, Perfumdle et Mes Ferias." />
     <meta property="og:image" content="https://codelythe.com/images/og.png" />
-    <meta property="og:url" content="https://codelythe.com" />
+    <meta property="og:url" content="https://codelythe.com/" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="CODELYTHE | Tom Bouchard" />
-    <meta name="twitter:description" content="Développeur full-stack, étudiant Epitech Montpellier, fondateur Codelythe. Portfolio web et IA." />
+    <meta name="twitter:title" content="Tom Bouchard · Codelythe" />
+    <meta name="twitter:description" content="Architecte mobile et créateur de Jutrack, Chollo, Spoily, Perfumdle et Mes Ferias." />
     <meta name="twitter:image" content="https://codelythe.com/images/og.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tom Bouchard",
+        "url": "https://codelythe.com/",
+        "jobTitle": "Architecte mobile",
+        "worksFor": { "@type": "Organization", "name": "Codelythe", "url": "https://codelythe.com/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Epitech Montpellier" },
+        "sameAs": [
+          "https://www.linkedin.com/in/tom-bouchard-881b212b2",
+          "https://github.com/dobronx06"
+        ],
+        "owns": [
+          { "@type": "MobileApplication", "name": "Jutrack", "url": "https://jutrack.app", "operatingSystem": "iOS, Android, Web", "applicationCategory": "SportsApplication" },
+          { "@type": "MobileApplication", "name": "Spoily", "url": "https://spoily.app", "operatingSystem": "iOS, Web", "applicationCategory": "EntertainmentApplication" },
+          { "@type": "MobileApplication", "name": "Chollo", "url": "https://cholloapp.com", "operatingSystem": "iOS, Android", "applicationCategory": "LifestyleApplication" },
+          { "@type": "WebSite", "name": "Perfumdle", "url": "https://perfumdle.com" },
+          { "@type": "WebSite", "name": "Mes Ferias", "url": "https://mesferias.fr" }
+        ]
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <title>CODELYTHE | Tom Bouchard</title>
   </head>
   <body class="antialiased">
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static fallback, replaced by React on load. Keeps every project link crawlable without JS. -->
+      <main style="max-width:960px;margin:0 auto;padding:120px 24px;font-family:system-ui,sans-serif">
+        <h1>Tom Bouchard · Codelythe</h1>
+        <p>Architecte mobile chez Hitopic et fondateur de Codelythe. Apps mobiles, SDK publicitaires, sites SEO et outils IA.</p>
+        <h2>Projets</h2>
+        <ul>
+          <li><a href="https://jutrack.app">Jutrack</a> : le carnet de combat des judokas et pratiquants de JJB, 900+ utilisateurs (iOS, Android, Web).</li>
+          <li><a href="https://spoily.app">Spoily</a> : le journal de tes séries, sans spoiler.</li>
+          <li><a href="https://perfumdle.com">Perfumdle</a> : un parfum mystère à deviner chaque jour.</li>
+          <li><a href="https://cholloapp.com">Chollo</a> : bons plans pour les 18-26 ans à Barcelone.</li>
+          <li><a href="https://mesferias.fr">Mes Ferias</a> : le calendrier des ferias en France et en Espagne.</li>
+          <li><a href="https://www.xvovalie.com">XV Ovalie</a> : l'app d'actualité rugby.</li>
+          <li><a href="https://edgeniche.com">EdgeNiche</a> : site vitrine d'agence SEO.</li>
+        </ul>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

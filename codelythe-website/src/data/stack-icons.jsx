@@ -27,6 +27,10 @@ const STACK_ICONS = {
   vite: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M2 5h20L12 22 2 5Z"/><circle cx="12" cy="10" r="1.4" fill="currentColor"/></svg>`,
   vercel: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 20h20L12 3Z"/></svg>`,
   railway: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18M3 10h18M3 14h18"/><circle cx="7" cy="18" r="1.5"/><circle cx="17" cy="18" r="1.5"/></svg>`,
+  astro: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9.5 3h5l5 14.5c-2-1-4.3-1.5-7.5-1.5s-5.5.5-7.5 1.5L9.5 3Z"/><path d="M9 18.5c0 1.5 1.3 2.5 3 2.5s3-1 3-2.5" stroke-linecap="round"/></svg>`,
+  cloudflare: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 18H6a4 4 0 0 1-.5-8 6 6 0 0 1 11.4 1.6A3.3 3.3 0 0 1 17.5 18Z"/></svg>`,
+  stripe: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19M6 15h4"/></svg>`,
+  revenuecat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M14.5 9.2c-.4-.9-1.3-1.4-2.5-1.4-1.5 0-2.5.8-2.5 2 0 2.6 5 1.4 5 4.2 0 1.2-1.1 2.1-2.6 2.1-1.3 0-2.3-.6-2.7-1.6M12 6v1.8M12 16.1V18"/></svg>`,
   figma: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="15.5" cy="12" r="3"/><path d="M8.5 3h3a3 3 0 0 1 0 6h-3a3 3 0 0 1 0-6Z"/><path d="M8.5 9h3a3 3 0 0 1 0 6h-3a3 3 0 0 1 0-6Z"/><path d="M8.5 15h3a3 3 0 1 1-3 3v-3Z"/></svg>`,
 }
 

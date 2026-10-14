@@ -6,7 +6,7 @@ import { useScrollSpy } from '../../hooks/useScrollSpy'
 import { content } from '../../data/content'
 import LanguageToggle from '../ui/LanguageToggle'
 
-const SECTIONS = ['work', 'about', 'stack']
+const SECTIONS = ['work', 'index', 'about', 'stack']
 
 export default function Navbar({ onContact, minimal }) {
   const { lang } = useLanguage()
@@ -33,7 +33,7 @@ export default function Navbar({ onContact, minimal }) {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--bg-creme)]/80 backdrop-blur-lg border-b border-[var(--border-warm)]/60">
-        <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-8 py-4">
+        <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-5 sm:px-8 py-4">
           {isMinimal ? (
             <Link
               to="/"
