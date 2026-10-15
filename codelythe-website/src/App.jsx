@@ -5,6 +5,7 @@ import Footer from './components/layout/Footer'
 import Intro from './components/sections/Intro'
 import Credibility from './components/sections/Credibility'
 import Work from './components/sections/Work'
+import AI from './components/sections/AI'
 import ProjectIndex from './components/sections/ProjectIndex'
 import Journey from './components/sections/Journey'
 import About from './components/sections/About'
@@ -25,6 +26,7 @@ function Portfolio() {
         <Intro onContact={openModal} />
         <Credibility />
         <Work />
+        <AI />
         <ProjectIndex />
         <About />
         <Journey />

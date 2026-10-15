@@ -97,7 +97,7 @@ export default function ProjectIndex() {
   const t = content.index[lang]
 
   return (
-    <section id="index" className="section-padding !pt-8">
+    <section id="index" className="section-padding">
       <div className="container">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
           <div>

@@ -1,23 +1,23 @@
 export const content = {
   nav: {
-    fr: { work: 'Projets', index: 'Clients', about: 'À propos', stack: 'Stack', contact: 'Contact', cv: 'Télécharger CV' },
-    en: { work: 'Work', index: 'Clients', about: 'About', stack: 'Stack', contact: 'Contact', cv: 'Download CV' },
+    fr: { work: 'Projets', ai: 'IA', index: 'Clients', about: 'À propos', stack: 'Stack', contact: 'Contact', cv: 'Télécharger CV' },
+    en: { work: 'Work', ai: 'AI', index: 'Clients', about: 'About', stack: 'Stack', contact: 'Contact', cv: 'Download CV' },
   },
 
   hero: {
     // {id} placeholders become links to the matching project in `projects`.
     fr: {
       name: 'Tom Bouchard',
-      role: 'Architecte mobile · fondateur de Codelythe',
+      role: 'Architecte mobile & IA · fondateur de Codelythe',
       lead: 'Je conçois et lance mes propres apps et sites : {jutrack}, {chollo}, {spoily}, {perfumdle} et {mesferias}. Et des apps pour d\'autres, comme {xvovalie}.',
-      now: 'Aujourd\'hui chez Hitopic, je construis des apps mobiles et les SDK publicitaires qui les financent. L\'IA est dans chaque étape.',
+      now: 'Aujourd\'hui chez Hitopic sur les apps mobiles et les SDK publicitaires. En parallèle, je conçois des agents IA, des pipelines LLM et du RAG qui tournent en production.',
       workCta: 'Voir les projets', cvCta: 'Télécharger CV',
     },
     en: {
       name: 'Tom Bouchard',
-      role: 'Mobile architect · founder of Codelythe',
+      role: 'Mobile & AI architect · founder of Codelythe',
       lead: 'I design and ship my own apps and sites: {jutrack}, {chollo}, {spoily}, {perfumdle} and {mesferias}. And apps for others, like {xvovalie}.',
-      now: 'Currently at Hitopic, building mobile apps and the ad SDKs that fund them. AI is part of every step.',
+      now: 'Currently at Hitopic on mobile apps and ad SDKs. Alongside, I design AI agents, LLM pipelines and RAG systems that run in production.',
       workCta: 'See the work', cvCta: 'Download CV',
     },
   },
@@ -25,6 +25,57 @@ export const content = {
   featured: {
     fr: { eyebrow: 'Sélection', head: 'Produits phares', sub: 'Mes produits, conçus, codés et lancés de A à Z.' },
     en: { eyebrow: 'Selected work', head: 'Flagship products', sub: 'My own products, designed, built and launched end to end.' },
+  },
+
+  ai: {
+    fr: {
+      eyebrow: 'Intelligence artificielle',
+      head: 'L\'IA dans mes produits,\net dans ma façon de construire.',
+      sub: 'Depuis 2023 : des LLM branchés sur de vrais utilisateurs, des agents qui agissent, et une usine de sites pilotée par des agents.',
+    },
+    en: {
+      eyebrow: 'Artificial intelligence',
+      head: 'AI inside my products,\nand in how I build them.',
+      sub: 'Since 2023: LLMs wired to real users, agents that take action, and a site factory run by agents.',
+    },
+    items: [
+      {
+        key: 'product',
+        title: { fr: 'IA dans le produit', en: 'AI in the product' },
+        body: {
+          fr: 'Le coach IA de Jutrack analyse les combats et génère conseils et bilans de saison, en JSON validé par schéma. Le contenu de l\'app est traduit en 5 langues par LLM, et le back-office de Chollo traduit les demandes en un clic.',
+          en: 'Jutrack\'s AI coach analyzes fights and generates advice and season reports as schema-validated JSON. App content is translated into 5 languages by LLM, and Chollo\'s back office translates requests in one click.',
+        },
+        proof: ['Jutrack', 'Chollo', 'Claude Haiku', 'Structured output'],
+      },
+      {
+        key: 'agents',
+        title: { fr: 'Agents qui agissent', en: 'Agents that take action' },
+        body: {
+          fr: 'Chez Rizblanc, Agent-0 vit dans Slack : routeur d\'intentions, outils Notion, Pennylane, Dropbox, email et recherche web, résumés de réunions et RAG sur la base de connaissances. Multi-modèles : Claude, GPT et Gemini.',
+          en: 'At Rizblanc, Agent-0 lives in Slack: intent router, Notion, Pennylane, Dropbox, email and web search tools, meeting summaries and RAG over the knowledge base. Multi-model: Claude, GPT and Gemini.',
+        },
+        proof: ['Rizblanc', 'Tool use', 'RAG', 'Multi-LLM'],
+      },
+      {
+        key: 'factory',
+        title: { fr: 'Usine à produits par agents', en: 'Agent-run product factory' },
+        body: {
+          fr: 'Une équipe de 10 agents Claude Code : vérification légale, collecte et validation des données, direction artistique, assemblage Astro, maillage SEO et push GitHub. C\'est comme ça qu\'est né Perfumdle. Même logique pour l\'Ad Factory, qui transforme une app en vidéos pub.',
+          en: 'A team of 10 Claude Code agents: legal check, data collection and validation, art direction, Astro assembly, SEO linking and GitHub push. That\'s how Perfumdle was born. Same idea for the Ad Factory, which turns an app into ad videos.',
+        },
+        proof: ['Claude Code', 'Sub-agents', 'Perfumdle', 'Remotion'],
+      },
+      {
+        key: 'research',
+        title: { fr: 'RAG, multi-agents et recherche', en: 'RAG, multi-agent and research' },
+        body: {
+          fr: 'Synovek, SaaS d\'assistants IA sur mesure pour PME avec indexation RAG et embeddings. sndwrld, pipeline multi-agents qui transforme un morceau en niveau Unreal Engine 5. Finaliste PINKCC en segmentation de tumeurs, 1er prix du Hackathon GenAI Epitech.',
+          en: 'Synovek, a custom AI assistant SaaS for SMBs with RAG indexing and embeddings. sndwrld, a multi-agent pipeline that turns a song into an Unreal Engine 5 level. PINKCC finalist in tumor segmentation, 1st place at the Epitech GenAI Hackathon.',
+        },
+        proof: ['Synovek', 'sndwrld', 'PyTorch', 'GenAI Hackathon'],
+      },
+    ],
   },
 
   index: {
@@ -38,13 +89,13 @@ export const content = {
       eyebrow: 'À propos',
       head: 'La personne\nderrière le code.',
       bio: [
-        'Je suis Tom, architecte mobile, étudiant en 4e année à Epitech Montpellier et fondateur de Codelythe. Aujourd\'hui chez Hitopic, je conçois des apps mobiles et les SDK publicitaires qui les monétisent.',
+        'Je suis Tom, architecte mobile et IA, étudiant en 4e année à Epitech Montpellier et fondateur de Codelythe. Aujourd\'hui chez Hitopic, je conçois des apps mobiles et les SDK publicitaires qui les monétisent.',
         'J\'aime aller du premier commit jusqu\'aux premiers utilisateurs. Jutrack (ex-Judata) suit plus de 900 judokas et pratiquants de JJB sur iOS, Android et le web. Chollo, Spoily, Perfumdle et Mes Ferias suivent la même logique : un besoin précis, un produit simple, et du SEO pour être trouvé.',
-        'Avant ça : l\'app XV Ovalie, des missions pour Royal Canin via Told, un stage chez Elloha et un poste d\'architecte IA chez Rizblanc. L\'IA est dans ma boîte à outils depuis 2023, du code jusqu\'aux produits.',
+        'L\'IA, je l\'utilise à deux niveaux : dans les produits (coach IA de Jutrack, agent Slack chez Rizblanc, RAG pour Synovek) et dans ma façon de construire, avec des équipes d\'agents Claude Code qui génèrent des sites entiers. Avant ça : l\'app XV Ovalie, Royal Canin via Told et un stage chez Elloha.',
       ],
       stats: [
         { v: '900+', k: 'utilisateurs Jutrack' },
-        { v: 'Architecte mobile', k: 'Hitopic · en cours' },
+        { v: 'Mobile & IA', k: 'Hitopic · en cours' },
         { v: '4e année', k: 'Epitech Montpellier' },
       ],
       cvCta: 'Télécharger le CV',
@@ -53,13 +104,13 @@ export const content = {
       eyebrow: 'About',
       head: 'The person\nbehind the code.',
       bio: [
-        'I\'m Tom, mobile architect, 4th-year Epitech Montpellier student and founder of Codelythe. Currently at Hitopic, I design mobile apps and the ad SDKs that monetize them.',
+        'I\'m Tom, mobile and AI architect, 4th-year Epitech Montpellier student and founder of Codelythe. Currently at Hitopic, I design mobile apps and the ad SDKs that monetize them.',
         'I like going from the first commit to the first users. Jutrack (formerly Judata) tracks 900+ judo and BJJ athletes on iOS, Android and the web. Chollo, Spoily, Perfumdle and Mes Ferias follow the same recipe: a sharp need, a simple product, and SEO so people find it.',
-        'Before that: the XV Ovalie app, missions for Royal Canin via Told, an internship at Elloha and an AI architect role at Rizblanc. AI has been in my toolbox since 2023, from code to products.',
+        'I use AI on two levels: inside products (Jutrack\'s AI coach, a Slack agent at Rizblanc, RAG for Synovek) and in how I build, with teams of Claude Code agents that generate entire sites. Before that: the XV Ovalie app, Royal Canin via Told and an internship at Elloha.',
       ],
       stats: [
         { v: '900+', k: 'Jutrack users' },
-        { v: 'Mobile architect', k: 'Hitopic · current' },
+        { v: 'Mobile & AI', k: 'Hitopic · current' },
         { v: 'Year 4', k: 'Epitech Montpellier' },
       ],
       cvCta: 'Download CV',
@@ -98,11 +149,13 @@ export const content = {
         ]},
       { key: 'ai', label: { fr: 'IA', en: 'AI' },
         items: [
-          { n: 'Anthropic', ic: 'anthropic' },
-          { n: 'Claude Code', ic: 'claudecode' },
+          { n: 'Claude · Anthropic', ic: 'anthropic' },
           { n: 'OpenAI', ic: 'openai' },
-          { n: 'Agents', ic: 'agent' },
-          { n: 'RAG', ic: 'rag' },
+          { n: 'Gemini', ic: 'perplexity' },
+          { n: 'Claude Code', ic: 'claudecode' },
+          { n: 'Agents · MCP', ic: 'agent' },
+          { n: 'RAG · embeddings', ic: 'rag' },
+          { n: 'Vercel AI SDK', ic: 'vercel' },
           { n: 'PyTorch', ic: 'pytorch' },
         ]},
       { key: 'tools', label: { fr: 'Infra & outils', en: 'Infra & tools' },

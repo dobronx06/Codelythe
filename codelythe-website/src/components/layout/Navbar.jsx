@@ -6,7 +6,7 @@ import { useScrollSpy } from '../../hooks/useScrollSpy'
 import { content } from '../../data/content'
 import LanguageToggle from '../ui/LanguageToggle'
 
-const SECTIONS = ['work', 'index', 'about', 'stack']
+const SECTIONS = ['work', 'ai', 'index', 'about', 'stack']
 
 export default function Navbar({ onContact, minimal }) {
   const { lang } = useLanguage()
